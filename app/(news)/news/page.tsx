@@ -5,6 +5,44 @@ import { Box, Text } from "@chakra-ui/react";
 import { getAllArticles } from "@/lib/actions/getAllArticles.action";
 import { Article } from "@/lib/types/article";
 import Image from "next/image";
+// app/news/page.tsx
+import { Metadata } from "next";
+
+// eslint-disable-next-line import/no-unused-modules
+export const metadata: Metadata = {
+  title: "News & Updates | Luxe Managements",
+  description:
+    "Stay up to date with the latest news, tips, and Airbnb industry insights from Luxe Managements.",
+  keywords: [
+    "Airbnb News",
+    "Property Management News",
+    "Adelaide",
+    "Luxe Managements",
+    "Updates",
+  ],
+  openGraph: {
+    title: "News & Updates | Luxe Managements",
+    description:
+      "Read about our latest launches, success stories, and Airbnb hosting tips.",
+    url: "/news",
+    images: [
+      {
+        url: "/news/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Airbnb property featured in our news",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "News & Updates | Luxe Managements",
+    description:
+      "Read about our latest launches, success stories, and Airbnb hosting tips.",
+    images: ["/news/og-image.jpg"],
+  },
+};
 
 const NewsPage = () => {
   const [articles, setArticles] = useState<Article[]>([]);

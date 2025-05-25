@@ -79,6 +79,44 @@ import houseSixImg7 from "@/public/images/dalts/houseSix/WEB/7.jpg";
 import houseSixImg8 from "@/public/images/dalts/houseSix/WEB/8.jpg";
 import houseSixImg9 from "@/public/images/dalts/houseSix/WEB/9.jpg";
 import Image from "next/image";
+// app/gallery/page.tsx
+import { Metadata } from "next";
+
+// eslint-disable-next-line import/no-unused-modules
+export const metadata: Metadata = {
+  title: "Gallery | Luxe Managements",
+  description:
+    "Browse our portfolio of beautifully styled Airbnb properties managed by Luxe Managements in Adelaide.",
+  keywords: [
+    "Gallery",
+    "Airbnb Photos",
+    "Property Styling",
+    "Adelaide",
+    "Luxe Managements",
+  ],
+  openGraph: {
+    title: "Gallery | Luxe Managements",
+    description:
+      "See before-and-after shots of our most stunning Airbnb makeovers.",
+    url: "/gallery",
+    images: [
+      {
+        url: "/gallery/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Before and after Airbnb styling examples",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gallery | Luxe Managements",
+    description:
+      "See before-and-after shots of our most stunning Airbnb makeovers.",
+    images: ["/gallery/og-image.jpg"],
+  },
+};
 
 const Gallery = () => {
   useEffect(() => {

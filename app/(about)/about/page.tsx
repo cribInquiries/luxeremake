@@ -1,4 +1,6 @@
 "use client";
+
+
 import React, { useState, useEffect } from "react";
 import { Box, HStack, Text, VStack } from "@chakra-ui/react";
 
@@ -13,6 +15,46 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultation";
 import Image from "next/image";
+
+// app/about/page.tsx
+import { Metadata } from "next";
+
+// eslint-disable-next-line import/no-unused-modules
+export const metadata: Metadata = {
+  title: "About Us | Luxe Managements",
+  description:
+    "Discover the team behind Luxe Managements, Adelaide’s trusted Airbnb property management experts.",
+  keywords: [
+    "Airbnb",
+    "Property Management",
+    "Adelaide",
+    "Luxe Managements",
+    "About Us",
+  ],
+  openGraph: {
+    title: "About Us | Luxe Managements",
+    description:
+      "Meet the team and learn why Luxe Managements is Adelaide’s top choice for Airbnb hosts.",
+    url: "/about",
+    images: [
+      {
+        url: "/about/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Team at Luxe Managements office",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | Luxe Managements",
+    description:
+      "Meet the team and learn why Luxe Managements is Adelaide’s top choice for Airbnb hosts.",
+    images: ["/about/og-image.jpg"],
+  },
+};
+
 const About = () => {
   useEffect(() => {
     Aos.init({
