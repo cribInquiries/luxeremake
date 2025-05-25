@@ -17,16 +17,16 @@ import { useRouter } from "next/navigation";
 import ScheduleConsultation from "./luxeComponents/scheduleConsultation";
 const faqs = [
   {
-    question: "What services does your Airbnb management offer?",
+    question: "What services does your AirBnB management offer?",
     answer:
-      "At Luxe Managements, we offer end-to-end Airbnb and short-stay property management. From creating standout listings and handling all guest communication, to dynamic pricing, professional cleaning, hotel-quality linen, and round-the-clock maintenance — we take care of everything so you can enjoy stress-free passive income. Our service is tailored to deliver a seamless, high-end hosting experience.",
+      "At Luxe Managements, we offer end-to-end AirBnB and short-stay property management. From creating standout listings and handling all guest communication, to dynamic pricing, professional cleaning, hotel-quality linen, and round-the-clock maintenance — we take care of everything so you can enjoy stress-free passive income. Our service is tailored to deliver a seamless, high-end hosting experience.",
     category: "services",
     icon: Star,
   },
   {
     question: "How do you help maximize rental income?",
     answer:
-      "We use real-time market data and advanced pricing tools to ensure your property is always listed at the optimal rate. Combined with high-converting listings, professional photography, and multi-platform exposure across Airbnb, Booking.com, and more, our strategies regularly boost income by up to 40%. Higher occupancy, better reviews, and premium nightly rates that's the Luxe difference.",
+      "We use real-time market data and advanced pricing tools to ensure your property is always listed at the optimal rate. Combined with high-converting listings, professional photography, and multi-platform exposure across AirBnB, Booking.com, and more, our strategies regularly boost income by up to 40%. Higher occupancy, better reviews, and premium nightly rates that's the Luxe difference.",
     category: "services",
     icon: Award,
   },
@@ -226,7 +226,7 @@ const FAQ = ({ type }: { type: string }) => {
             mt={6}
             lineHeight="1.6"
           >
-            Frequently Asked Questions about our premium Airbnb management
+            Frequently Asked Questions about our premium AirBnB management
             services
           </Text>
         </Box>
@@ -388,7 +388,7 @@ const FAQ = ({ type }: { type: string }) => {
             </Text>
             <Text fontSize="16px" color="#4B5563" lineHeight="1.6">
               Our team is ready to provide personalized answers to all your
-              questions about Airbnb management and how we can help maximize
+              questions about AirBnB management and how we can help maximize
               your property's potential.
             </Text>
           </Box>

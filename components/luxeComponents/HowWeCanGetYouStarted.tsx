@@ -31,7 +31,7 @@ const HowWeCanGetYouStarted = () => {
       id: 3,
       title: "Onboarding and Listing Creation",
       description:
-        "We’ll take care of professional photos and create detailed listings on platforms like Airbnb, ensuring your property attracts the right guests.",
+        "We’ll take care of professional photos and create detailed listings on platforms like AirBnB, ensuring your property attracts the right guests.",
       icon: <Camera size={20} />,
       stats: [],
       category: "Step 3",

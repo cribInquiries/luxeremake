@@ -413,7 +413,7 @@ const Store = () => {
           <Box display="flex" flexWrap="wrap" gap="24px">
             {[
               {
-                title: "Essential Amenities Every Airbnb Should Have",
+                title: "Essential Amenities Every AirBnB Should Have",
                 type: "Guide",
               },
               { title: "Quick Turnover Cleaning Checklist", type: "Checklist" },

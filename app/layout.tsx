@@ -23,9 +23,9 @@ const ClientProviderWithFallback = dynamic(
 
 // eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {
-  title: "Luxe Managements | The Best Airbnb Property Management in Adelaide",
+  title: "Luxe Managements | The Best AirBnB Property Management in Adelaide",
   description:
-    "Comprehensive Airbnb management services designed to maximize your rental income in Adelaide.",
+    "Comprehensive AirBnB management services designed to maximize your rental income in Adelaide.",
   metadataBase: new URL("https://www.luxemanagements.com"),
   alternates: {
     canonical: "https://www.luxemanagements.com",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Luxe Managements | Airbnb Property Management Adelaide",
+    title: "Luxe Managements | AirBnB Property Management Adelaide",
     description:
-      "Expert Airbnb property management services in Adelaide – full hosting, cleaning, styling, and guest care.",
+      "Expert AirBnB property management services in Adelaide – full hosting, cleaning, styling, and guest care.",
     url: "https://www.luxemanagements.com",
     siteName: "Luxe Managements",
     images: [
@@ -49,15 +49,15 @@ export const metadata: Metadata = {
         url: "https://www.luxemanagements.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Luxe Managements Airbnb property management",
+        alt: "Luxe Managements AirBnB property management",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxe Managements | Airbnb Property Management Adelaide",
-    description: "Expert Airbnb management – cleaning, styling & guest care.",
+    title: "Luxe Managements | AirBnB Property Management Adelaide",
+    description: "Expert AirBnB management – cleaning, styling & guest care.",
     images: ["https://www.luxemanagements.com/og-image.jpg"],
   },
   icons: {

@@ -86,13 +86,13 @@ const processEvent = (event: any, platform: string): any => {
   let guestInfo = null;
 
   if (platform === "airbnb") {
-    // Airbnb specific processing
+    // AirBnB specific processing
     isReservation =
       event.summary &&
       (event.summary.includes("CLOSED") ||
         event.summary.includes("BOOKED") ||
         event.summary.includes("Reservation") ||
-        event.summary.includes("Airbnb") ||
+        event.summary.includes("AirBnB") ||
         event.summary.includes("Not available"));
 
     // Try to extract guest info from description if available
@@ -107,7 +107,7 @@ const processEvent = (event: any, platform: string): any => {
           ? Number.parseInt(guestCountMatch[1], 10)
           : 0;
         guestInfo = {
-          name: "Airbnb",
+          name: "AirBnB",
         };
       }
     }
@@ -176,8 +176,8 @@ const processEvent = (event: any, platform: string): any => {
     }
   }
 
-  // Shift the date by 1 day forward for Airbnb to match Booking.com format
-  // This is a common adjustment needed for Airbnb iCal feeds
+  // Shift the date by 1 day forward for AirBnB to match Booking.com format
+  // This is a common adjustment needed for AirBnB iCal feeds
   const newStartDate = moment(startDate)
     .subtract(platform === "airbnb" ? 0 : 0, "day")
     .format("YYYY-MM-DDTHH:mm:ss");
@@ -193,7 +193,7 @@ const processEvent = (event: any, platform: string): any => {
     description: event.description || "",
     platform: platform,
     type: isReservation ? "reservation" : "Booking.com",
-    allDay: true, // iCal events from Airbnb and Booking.com are typically all-day events
+    allDay: true, // iCal events from AirBnB and Booking.com are typically all-day events
     guestInfo,
     // Include timezone info for clarity
     timezone: "Australia/Sydney",

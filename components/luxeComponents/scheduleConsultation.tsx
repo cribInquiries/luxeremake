@@ -88,7 +88,7 @@ const ScheduleConsultation = () => {
             <Text
               color="rgba(255, 255, 255, 0.9)"
               fontSize={["14px", "16px", "18px", "20px", "22px"]}
-              fontFamily="sans"
+             
               maxWidth="800px"
               mx="auto"
               lineHeight="1.5"
@@ -112,7 +112,7 @@ const ScheduleConsultation = () => {
                 py={["12px", "14px", "16px"]}
                 px={["24px", "32px", "40px"]}
                 borderRadius="full"
-                fontFamily="sans"
+              
                 fontSize={["14px", "15px", "16px"]}
                 fontWeight={isHovered ? "600" : "500"}
                 display="flex"

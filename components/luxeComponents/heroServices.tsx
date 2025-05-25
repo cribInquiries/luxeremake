@@ -49,7 +49,7 @@ const HeroServices = () => {
               fontWeight={300}
             >
               Optimize your earnings and ease your mind with our Adelaide-based
-              experienced Airbnb Management team.
+              experienced AirBnB Management team.
             </Text>
             <HStack
               justify={[
