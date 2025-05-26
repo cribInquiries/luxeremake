@@ -23,7 +23,7 @@ const ClientProviderWithFallback = dynamic(
 
 // eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {
-  title: "Luxe Managements | The Best AirBnB Property Management in Adelaide",
+  title: "Luxe Managements | AirBnB Property Management in Adelaide",
   description:
     "Comprehensive AirBnB management services designed to maximize your rental income in Adelaide.",
   metadataBase: new URL("https://www.luxemanagements.com"),
