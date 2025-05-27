@@ -122,7 +122,8 @@ const HeroServices = () => {
               {" "}
               <Image
                 quality={70}
-                loading="lazy"
+                priority
+                     loading="eager"
                 src="https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg"
                 alt="Amazing Property"
                 layout="fill"
@@ -300,7 +301,8 @@ const HeroServices = () => {
             >
               <Image
                 quality={70}
-                loading="lazy"
+                priority
+                     loading="eager"
                 src="https://images.pexels.com/photos/2826787/pexels-photo-2826787.jpeg"
               alt="Amazing Property"
                 layout="fill"
@@ -548,7 +550,8 @@ const HeroServices = () => {
             >
               <Image
                 quality={70}
-                loading="lazy"
+                priority
+                     loading="eager"
                 src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg"
               alt="Amazing Property"
                 layout="fill"
