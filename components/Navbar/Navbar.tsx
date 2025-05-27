@@ -252,7 +252,7 @@ const Navbar = () => {
         },
       ],
     },
-    { name: "Calculate", path: "/calculate", hasDropdown: false },
+    // { name: "Calculate", path: "/calculate", hasDropdown: false },
     { name: "Pricing", path: "/pricing", hasDropdown: false },
     { name: "Gallery", path: "/gallery", hasDropdown: false },
     { name: "Contact", path: "/contact", hasDropdown: false },
