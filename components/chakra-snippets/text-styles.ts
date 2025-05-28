@@ -52,7 +52,7 @@ export const textStyles = defineTextStyles({
       fontSize: {
         base: "25px",
         sm:   "25px",
-        md:   "25px",
+        md:   "35px",
         lg:   "50px",
         xl:   "50px",
         "2xl":"50px",
