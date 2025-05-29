@@ -1,11 +1,8 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @layer base {
   :root {
-   
     --foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -26,27 +23,15 @@
     --ring: 215 20.2% 65.1%;
     --radius: 0.5rem;
   }
-
-  
 }
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    body {
-      @apply font-arial antialiased bg-background text-foreground;
-    }
-    
+    @apply font-arial antialiased bg-background text-foreground;
   }
 }
 
-@layer utilities {
-  /* Horizontal Stack (HStack) */
 
-}
 
-html {
-
-  scroll-behavior: smooth;
-}
