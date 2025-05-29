@@ -1,4 +1,6 @@
 /* eslint-disable import/no-unused-modules */
+
+/// if seo becomes that bad go back to the previous version of this file
 import { ReactNode } from "react";
 import dynamic from "next/dynamic";
 import Script from "next/script";
@@ -19,7 +21,7 @@ const inter = Inter({
 // Client-only Chakra provider with a loading fallback (SSR enabled)
 const ClientProvider = dynamic(
   () => import("@/components/chakra-snippets/ClientProvider"),
-  { loading: () => <Loading /> }
+  { loading: () => <Loading /> },
 );
 
 // Define responsive viewport separately (Next.js 15+)
@@ -29,20 +31,33 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-
 export const metadata: Metadata = {
-  title: "Airbnb Property Management in Adelaide | Luxe Managements",
+  title: "Best Airbnb Management Adelaide | Luxe Managements",
+  keywords: [
+   "Airbnb Management Adelaide",
+    "Short-Term Rentals",
+    "Property Management",
+    "Luxe Managements",
+    "Guest Experience",
+    "Airbnb Hosting Solutions",
+    "Cleaning Services",
+    "Photography Services",
+  ],
   description:
-    "Boost your Airbnb rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
+    "Luxe Managements delivers top-rated Airbnb property management, housekeeping & guest support in Adelaide. Boost your rental income with expert hosting, professional photos, styling & 5 stars service.",
   metadataBase: new URL("https://www.luxemanagements.com"),
   alternates: { canonical: "https://www.luxemanagements.com" },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   openGraph: {
     type: "website",
     url: "https://www.luxemanagements.com",
-    title: "Airbnb Property Management Adelaide | Luxe Managements",
+    title: "Best Airbnb Management Adelaide | Luxe Managements",
     description:
-      "Boost your Airbnb rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
+  "Luxe Managements delivers top-rated Airbnb property management, housekeeping & guest support in Adelaide. Boost your rental income with expert hosting, professional photos, styling & 5 stars service.",
     siteName: "Luxe Managements",
     images: [
       {
@@ -55,17 +70,25 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Airbnb Property Management Adelaide | Luxe Managements",
+    title: "Best Airbnb Management Adelaide | Luxe Managements",
     description:
-      "Boost your Airbnb rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
+  "Luxe Managements delivers top-rated Airbnb property management, housekeeping & guest support in Adelaide. Boost your rental income with expert hosting, professional photos, styling & 5 stars service.",
     images: ["https://www.luxemanagements.com/og-image.png"],
   },
-  icons: { icon: "/favicon.ico", shortcut: "/favicon.ico", apple: "/apple-touch-icon.png" },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} antialiased`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${inter.variable} antialiased`}
+      suppressHydrationWarning
+    >
       {/* Next.js will inject <head> tags (charset, viewport, meta) based on `metadata` & `viewport` exports */}
       <head />
       <body>
@@ -81,11 +104,31 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               url: "https://www.luxemanagements.com/",
               name: "Luxe Managements",
               hasPart: [
-                { "@type": "SiteNavigationElement", name: "Home", url: "https://www.luxemanagements.com/" },
-                { "@type": "SiteNavigationElement", name: "Services", url: "https://www.luxemanagements.com/services" },
-                { "@type": "SiteNavigationElement", name: "About Us", url: "https://www.luxemanagements.com/about" },
-                { "@type": "SiteNavigationElement", name: "Testimonials", url: "https://www.luxemanagements.com/testimonials" },
-                { "@type": "SiteNavigationElement", name: "Contact", url: "https://www.luxemanagements.com/contact" },
+                {
+                  "@type": "SiteNavigationElement",
+                  name: "Home",
+                  url: "https://www.luxemanagements.com/",
+                },
+                {
+                  "@type": "SiteNavigationElement",
+                  name: "Services",
+                  url: "https://www.luxemanagements.com/services",
+                },
+                {
+                  "@type": "SiteNavigationElement",
+                  name: "About Us",
+                  url: "https://www.luxemanagements.com/about",
+                },
+                {
+                  "@type": "SiteNavigationElement",
+                  name: "Testimonials",
+                  url: "https://www.luxemanagements.com/testimonials",
+                },
+                {
+                  "@type": "SiteNavigationElement",
+                  name: "Contact",
+                  url: "https://www.luxemanagements.com/contact",
+                },
               ],
             }),
           }}
@@ -113,11 +156,21 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     addressRegion: "SA",
                     addressCountry: "AU",
                   },
-                  geo: { "@type": "GeoCoordinates", latitude: -34.9285, longitude: 138.6007 },
+                  geo: {
+                    "@type": "GeoCoordinates",
+                    latitude: -34.9285,
+                    longitude: 138.6007,
+                  },
                   openingHoursSpecification: [
                     {
                       "@type": "OpeningHoursSpecification",
-                      dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                      dayOfWeek: [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                      ],
                       opens: "09:00",
                       closes: "17:00",
                     },
@@ -131,26 +184,78 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 {
                   "@type": "BreadcrumbList",
                   itemListElement: [
-                    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.luxemanagements.com/" },
-                    { "@type": "ListItem", position: 2, name: "Services", item: "https://www.luxemanagements.com/services" },
-                    { "@type": "ListItem", position: 3, name: "Furnishing & Styling", item: "https://www.luxemanagements.com/services/furnishing-and-styling" },
-                    { "@type": "ListItem", position: 4, name: "Property Management", item: "https://www.luxemanagements.com/services/property-management" },
-                    { "@type": "ListItem", position: 5, name: "Photography", item: "https://www.luxemanagements.com/services/photography" },
-                    { "@type": "ListItem", position: 6, name: "Cleaning & Linen", item: "https://www.luxemanagements.com/services/cleaning-and-linen" },
-                    { "@type": "ListItem", position: 7, name: "About", item: "https://www.luxemanagements.com/about" },
-                    { "@type": "ListItem", position: 8, name: "Testimonials", item: "https://www.luxemanagements.com/testimonials" },
-                    { "@type": "ListItem", position: 9, name: "FAQ", item: "https://www.luxemanagements.com/faq" },
-                    { "@type": "ListItem", position: 10, name: "Contact", item: "https://www.luxemanagements.com/contact" },
+                    {
+                      "@type": "ListItem",
+                      position: 1,
+                      name: "Home",
+                      item: "https://www.luxemanagements.com/",
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 2,
+                      name: "Services",
+                      item: "https://www.luxemanagements.com/services",
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 3,
+                      name: "Furnishing & Styling",
+                      item: "https://www.luxemanagements.com/services/furnishing-and-styling",
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 4,
+                      name: "Property Management",
+                      item: "https://www.luxemanagements.com/services/property-management",
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 5,
+                      name: "Photography",
+                      item: "https://www.luxemanagements.com/services/photography",
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 6,
+                      name: "Cleaning & Linen",
+                      item: "https://www.luxemanagements.com/services/cleaning-and-linen",
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 7,
+                      name: "About",
+                      item: "https://www.luxemanagements.com/about",
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 8,
+                      name: "Testimonials",
+                      item: "https://www.luxemanagements.com/testimonials",
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 9,
+                      name: "FAQ",
+                      item: "https://www.luxemanagements.com/faq",
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 10,
+                      name: "Contact",
+                      item: "https://www.luxemanagements.com/contact",
+                    },
                   ],
                 },
               ],
             }),
           }}
         />
-
-        <Analytics />
+<Script id="vercel-analytics" strategy="lazyOnload">
+  <Analytics />
         <SpeedInsights />
 
+</Script>
+      
         <ClientProvider>
           <LuxeAiAssistance />
           {children}
