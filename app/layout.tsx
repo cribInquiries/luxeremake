@@ -1,7 +1,8 @@
+/* eslint-disable import/no-unused-modules */
 import { ReactNode } from "react";
 import dynamic from "next/dynamic";
 import Script from "next/script";
-import { Metadata } from "next";
+import { Metadata, type Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
@@ -21,11 +22,18 @@ const ClientProvider = dynamic(
   { loading: () => <Loading /> }
 );
 
+// Define responsive viewport separately (Next.js 15+)
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
+
 export const metadata: Metadata = {
   title: "Airbnb Property Management in Adelaide",
   description:
     "Boost your Airbnb rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
-  viewport: "width=device-width, initial-scale=1",
   metadataBase: new URL("https://www.luxemanagements.com"),
   alternates: { canonical: "https://www.luxemanagements.com" },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
@@ -58,7 +66,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} antialiased`} suppressHydrationWarning>
-      {/* Next.js will inject <head> tags based on `metadata` automatically */}
+      {/* Next.js will inject <head> tags (charset, viewport, meta) based on `metadata` & `viewport` exports */}
       <head />
       <body>
         {/* Structured data: site navigation */}
@@ -109,13 +117,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   openingHoursSpecification: [
                     {
                       "@type": "OpeningHoursSpecification",
-                      dayOfWeek: [
-                        "Monday",
-                        "Tuesday",
-                        "Wednesday",
-                        "Thursday",
-                        "Friday",
-                      ],
+                      dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"],
                       opens: "09:00",
                       closes: "17:00",
                     },
