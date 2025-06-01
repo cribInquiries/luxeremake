@@ -11,7 +11,7 @@ export default function Head() {
 
       {/* === Schema.org: Site Navigation === */}
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-4Z0V9JJW4Y"
+        src="https://www.googletagmanager.com/gtag/js?id=G-W2PQ768LGL"
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -20,7 +20,7 @@ export default function Head() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-4Z0V9JJW4Y');
+          gtag('config', 'G-W2PQ768LGL');
         `}
       </Script>
 
