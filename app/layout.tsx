@@ -20,25 +20,42 @@ const ClientProviderWithFallback = dynamic(
 );
 
 export const metadata: Metadata = {
-  title: "Luxe Managements Airbnb Property Management Adelaide",
+  title: "Airbnb Property Management Adelaide | Luxe Managements",
   description:
-    "Airbnb management services designed to maximize your rental income in Adelaide. Our comprehensive solutions include property styling, professional photography, cleaning, and guest care to ensure your property stands out and operates smoothly.",
+    "Airbnb Property Management Adelaide by Luxe Managements. We provide styling, professional photography, cleaning, and guest care so your Adelaide property stands out and earns more.",
   metadataBase: new URL("https://www.luxemanagements.com"),
+  keywords: [
+    "Airbnb",
+    "Adelaide",
+    "Property Management",
+    "Airbnb Property Management Adelaide",
+    "Property Management Adelaide",
+    "Airbnb Property Management",
+    "Luxe Managements"
+  ],
+
+  
+  authors: [
+    {
+      name: "Luxe Managements",
+      url: "https://www.luxemanagements.com"
+    }
+  ],
   alternates: {
-    canonical: "https://www.luxemanagements.com",
+    canonical: "https://www.luxemanagements.com"
   },
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
-      follow: true,
-    },
+      follow: true
+    }
   },
   openGraph: {
-    title: "Luxe Managements Airbnb Property Management Adelaide",
+    title: "Airbnb Property Management Adelaide | Luxe Managements",
     description:
-      "Airbnb management services designed to maximize your rental income in Adelaide. Our comprehensive solutions include property styling, professional photography, cleaning, and guest care to ensure your property stands out and operates smoothly.",
+      "Airbnb Property Management Adelaide by Luxe Managements. We provide styling, professional photography, cleaning, and guest care so your Adelaide property stands out and earns more.",
     url: "https://www.luxemanagements.com",
     siteName: "Luxe Managements",
     images: [
@@ -46,23 +63,23 @@ export const metadata: Metadata = {
         url: "https://www.luxemanagements.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Luxe Managements Airbnb property management",
-      },
+        alt: "Luxe Managements Airbnb property management"
+      }
     ],
-    type: "website",
+    type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxe Managements Airbnb Property Management Adelaide",
+    title: "Airbnb Property Management Adelaide | Luxe Managements",
     description:
-      "Airbnb management services designed to maximize your rental income in Adelaide. Our comprehensive solutions include property styling, professional photography, cleaning, and guest care to ensure your property stands out and operates smoothly.",
-    images: ["https://www.luxemanagements.com/og-image.jpg"],
+      "Airbnb Property Management Adelaide by Luxe Managements. We provide styling, professional photography, cleaning, and guest care so your Adelaide property stands out and earns more.",
+    images: ["https://www.luxemanagements.com/og-image.jpg"]
   },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
+    apple: "/apple-touch-icon.png"
+  }
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
