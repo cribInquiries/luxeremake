@@ -32,6 +32,17 @@ export const metadata: Metadata = {
     "Property Management Adelaide",
     "Airbnb Property Management",
   ],
+  publisher: "Luxe Managements",
+  creator: "Luxe Managements",
+  applicationName: "Luxe Managements",
+  themeColor: "#ffffff",
+  colorScheme: "light dark",
+
+  verification: {
+    google: "google-site-verification=your-verification-code",
+    yandex: "yandex-verification: your-verification-code",
+    me: "me-verification-code",
+  },
 
   
   authors: [
