@@ -332,6 +332,7 @@ export const SliderPrevButton = ({
   const { onPrevButtonClick, prevBtnDisabled }: any = useCarouselContext();
   return (
     <button
+    aria-label="Previous slide"
       className={cn("", className)}
       type="button"
       onClick={onPrevButtonClick}
@@ -352,6 +353,7 @@ export const SliderNextButton = ({
   return (
     <>
       <button
+      aria-label="Next slide"
         className={cn("", className)}
         type="button"
         onClick={onNextButtonClick}
@@ -423,6 +425,7 @@ export const SliderDotButton = ({
       <div className="flex gap-2">
         {scrollSnaps.map((_: any, index: React.Key | null | undefined) => (
           <button
+          aria-label="Select slide"
             type="button"
             key={index}
             onClick={() => onDotButtonClick(index)}

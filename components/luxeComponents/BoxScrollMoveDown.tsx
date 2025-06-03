@@ -42,6 +42,7 @@ export function BoxScrollMoveDown() {
               >
                 <Box
                   as={"button"}
+                    aria-label="Get in Touch"
                   data-aos="fade-up"
                   mt={"50px"}
                   display={"flex"}

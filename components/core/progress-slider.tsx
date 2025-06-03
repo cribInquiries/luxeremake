@@ -204,6 +204,7 @@ export const SliderBtn: FC<SliderBtnProps> = ({
 
   return (
     <button
+    aria-label="Select slide"
       className={cn(
         `relative ${active === value ? "opacity-100" : "opacity-50"}`,
         className,

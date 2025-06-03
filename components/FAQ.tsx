@@ -398,6 +398,7 @@ textStyle={"basicText"}
             </Text>
           </Box>
           <Box
+          aria-label="Contact us"
           as={"button"}
             display="flex"
             alignItems="center"

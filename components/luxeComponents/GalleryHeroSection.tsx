@@ -56,6 +56,7 @@ const GalleryHeroSection = () => {
           >
             <Box
             as={"button"}
+            aria-label="Go to Gallery"
               data-aos="fade-up"
               my={"40px"}
               display={"flex"}

@@ -701,6 +701,7 @@ const NewsPage = () => {
         >
           <Box
             as="button"
+        aria-label="Load more articles"
             onClick={fetchArticles}
             padding={{ base: "10px 24px", sm: "11px 28px", md: "12px 32px" }}
             borderRadius={{ base: "4px", md: "6px" }}

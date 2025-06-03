@@ -639,6 +639,7 @@ const About = () => {
               gap={["0", "0", "0", "50px", "50px", "100px"]}
             >
               <HStack
+              aria-label="Previous Slide"
                 display={["none", "none", "none", "flex", "flex", "flex"]}
                 as={"button"}
                 mt={["25px", "25px", "50px", "25px", "25px", "25px"]}
@@ -692,6 +693,7 @@ const About = () => {
               <HStack
                 display={["none", "none", "none", "flex", "flex", "flex"]}
                 as={"button"}
+                   aria-label="Next Slide"
                 mt={["25px", "25px", "50px", "25px", "25px", "25px"]}
                 w={["50px", "50px", "50px", "100px", "100px", "100px"]}
                 h={["50px", "50px", "50px", "100px", "100px", "100px"]}
@@ -716,6 +718,7 @@ const About = () => {
             </HStack>
             <HStack mt={["25px", "25px", "50px", "25px", "25px", "25px"]}>
               <HStack
+                      aria-label="Previous Slide"
                 display={["flex", "flex", "flex", "none", "none", "none"]}
                 as={"button"}
                 w={["50px", "50px", "50px", "170px", "200px", "125px"]}
@@ -759,6 +762,7 @@ const About = () => {
               <HStack
                 display={["flex", "flex", "flex", "none", "none", "none"]}
                 as={"button"}
+                 aria-label="Next Slide"
                 w={["50px", "50px", "50px", "170px", "200px", "125px"]}
                 h={["50px", "50px", "50px", "50px", "50px", "125px"]}
                 transition={"transform 0.3s ease"}

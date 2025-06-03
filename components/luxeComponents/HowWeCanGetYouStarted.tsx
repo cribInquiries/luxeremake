@@ -378,6 +378,7 @@ const HowWeCanGetYouStarted = () => {
             router.push("/contact");
           }}
           as={"button"}
+          aria-label="Partner With Us"
         >
           <Text>Partner With Us</Text>
         </Box>

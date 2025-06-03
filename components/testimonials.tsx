@@ -140,6 +140,7 @@ const Testimonials = () => {
             >
               <HStack
                 as={"button"}
+                aria-label="Previous slide"
                 mt={["25px", "25px", "50px", "25px", "25px", "25px"]}
                 w={["225px", "225px", "170px", "170px", "200px", "125px"]}
                 h={["50px", "50px", "50px", "50px", "50px", "50px"]}
@@ -165,6 +166,7 @@ const Testimonials = () => {
               </HStack>
               <HStack
                 as={"button"}
+                aria-label="Next slide"
                 mt={["25px", "25px", "50px", "25px", "25px", "25px"]}
                 w={["225px", "225px", "170px", "170px", "200px", "125px"]}
                 h={["50px", "50px", "50px", "50px", "50px", "50px"]}

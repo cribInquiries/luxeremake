@@ -404,6 +404,7 @@ const HeroServices = () => {
             >
               <Box
                 as={"button"}
+                aria-label="Learn more"
                 my={"25px"}
                 display={"flex"}
                 alignItems={"center"}
@@ -496,6 +497,7 @@ const HeroServices = () => {
               zIndex={3}
             >
               <Box
+              aria-label="Learn more"
                 as={"button"}
                 my={"25px"}
                 display={"flex"}
