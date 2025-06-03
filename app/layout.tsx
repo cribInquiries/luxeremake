@@ -38,11 +38,7 @@ export const metadata: Metadata = {
   themeColor: "#ffffff",
   colorScheme: "light dark",
 
-  verification: {
-    google: "google-site-verification=your-verification-code",
-    yandex: "yandex-verification: your-verification-code",
-    me: "me-verification-code",
-  },
+ 
 
   
   authors: [

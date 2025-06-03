@@ -10,19 +10,6 @@ export default function Head() {
       <meta name="msvalidate.01" content="B0FAC79EC83471CFFCF9C038F16E0539" />
 
       {/* === Schema.org: Site Navigation === */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-W2PQ768LGL"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-W2PQ768LGL');
-        `}
-      </Script>
 
       <Script
         id="ld-navigation"
