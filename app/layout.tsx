@@ -43,15 +43,18 @@ export const metadata: Metadata = {
   applicationName: "Luxe Managements",
   category: "Property Management",
   classification: "Business",
+
   authors: [
     {
       name: "Luxe Managements",
       url: "https://www.luxemanagements.com",
     },
   ],
+
   alternates: {
     canonical: "https://www.luxemanagements.com",
   },
+
   robots: {
     index: true,
     follow: true,
@@ -65,6 +68,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+
   openGraph: {
     title: "Airbnb Management Adelaide | Luxe Managements",
     description:
@@ -81,8 +85,16 @@ export const metadata: Metadata = {
         alt: "Luxe Managements - Professional Airbnb Property Management Adelaide",
         type: "image/jpeg",
       },
+      {
+        url: "https://www.luxemanagements.com/og-image-square.jpg",
+        width: 1200,
+        height: 1200,
+        alt: "Luxe Managements Logo",
+        type: "image/jpeg",
+      },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
     site: "@luxemanagements",
@@ -95,6 +107,7 @@ export const metadata: Metadata = {
       alt: "Luxe Managements - Professional Airbnb Property Management Adelaide",
     },
   },
+
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -110,9 +123,26 @@ export const metadata: Metadata = {
       },
     ],
   },
-  manifest: "/site.webmanifest",
-}
 
+  manifest: "/site.webmanifest",
+
+  other: {
+    "msapplication-TileColor": "#ffffff",
+    "theme-color": "#ffffff",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "format-detection": "telephone=no",
+  },
+
+  verification: {
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code",
+    yahoo: "your-yahoo-verification-code",
+    other: {
+      "msvalidate.01": "B0FAC79EC83471CFFCF9C038F16E0539",
+    },
+  },
+}
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

@@ -1,3 +1,14 @@
+import type { Metadata } from "next"
+
+interface PageMetadataProps {
+  title: string
+  description: string
+  path: string
+  keywords?: string[]
+  ogImage?: string
+  noIndex?: boolean
+}
+
 export function generatePageMetadata({
   title,
   description,
@@ -10,7 +21,7 @@ export function generatePageMetadata({
 
   return {
     title,
-    description,  // This will be dynamically set, make sure to pass the correct description here
+    description,
     keywords: [...keywords, "Airbnb Management Adelaide", "Property Management Adelaide", "Luxe Managements"],
     alternates: {
       canonical: url,
