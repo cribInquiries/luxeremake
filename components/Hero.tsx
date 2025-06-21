@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import React, { useEffect } from "react";
 import { Box, Stack, HStack, Icon, Text } from "@chakra-ui/react";
 
-import { FlipWords } from "@/components/ui/flip-words";
+// import { FlipWords } from "@/components/ui/flip-words";
 import { ArrowRight } from "lucide-react";
 
 import Aos from "aos";
@@ -20,14 +20,14 @@ const Hero = () => {
     Aos.init({ duration: 1000, once: false, mirror: true });
   }, []);
 
-  const words = [
-    "Effortless ",
-    "Stress-free",
-    "Efficient",
-    "Simple",
-    "Effective",
-    "Easy",
-  ];
+  // const words = [
+  //   "Effortless ",
+  //   "Stress-free",
+  //   "Efficient",
+  //   "Simple",
+  //   "Effective",
+  //   "Easy",
+  // ];
   // redce font size for moible
 
   return (
