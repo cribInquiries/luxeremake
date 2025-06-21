@@ -154,12 +154,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Analytics />
         <SpeedInsights />
 
-        <Suspense fallback={<Loading />}>
+        
           <ClientProviderWithFallback>
             <LuxeAiAssistance />
             <main>{children}</main>
           </ClientProviderWithFallback>
-        </Suspense>
+      
       </body>
     </html>
   )
