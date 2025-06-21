@@ -150,7 +150,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         
           <ClientProviderWithFallback>
             <LuxeAiAssistance />
-            <main>{children}</main>
+            {children}
           </ClientProviderWithFallback>
       
       </body>
