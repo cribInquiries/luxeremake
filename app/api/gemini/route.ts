@@ -36,7 +36,7 @@ Founded: 2022
 Mission: Redefine short-term rental management through quality, transparency, and premium experiences for both guests and property owners.
 
 📌 Contact:
-- Email: info@luxemanagement.com / luxemanagements.info@gmail.com
+- Email: luxemanagemnets.info@gmail.com / luxemanagements.info@gmail.com
 - Phone: +61 406 631 461 / +61 406 631 461
 - Office Hours: Mon–Fri: 9AM–5PM, Sat: 10AM–2PM, Sun: Closed
 

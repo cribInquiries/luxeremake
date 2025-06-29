@@ -11,6 +11,9 @@ import HowWeCanGetYouStarted from "@/components/luxeComponents/HowWeCanGetYouSta
 import OurServices from "@/components/luxeComponents/OurServices";
 
 import FeaturedPlatforms from "@/components/luxeComponents/FeaturedPlatforms";
+import BasicAutoCarousel from "@/components/core/basicAutoCarousel";
+import DefaultSlider from "@/components/carousel/DefaultSlider";
+import ScaleSlider from "@/components/core/ScaleSlider";
 // import FollowingScrollButton from "@/components/luxeComponents/followingScrollButton";
 
 // Lazy load the GalleryHeroSection component
@@ -67,6 +70,8 @@ const Home = () => {
         <GalleryHeroSection />
       </Suspense> */}
 
+{/* 
+<ScaleSlider /> */}
       <Testimonials />
 
       {/* Horizontal dividers for spacing */}

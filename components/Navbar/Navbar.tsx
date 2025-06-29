@@ -298,7 +298,7 @@ const Navbar = () => {
               Luxury Property Management
             </Text>
             <Text  textStyle={"smallText"} color="#666">
-              info@luxemanagement.com
+              luxemanagemnets.info@gmail.com
             </Text>
           </Box>
           <Box display="flex" alignItems="center" flexWrap="wrap">
@@ -597,7 +597,7 @@ const Navbar = () => {
           {/* Mobile Contact Info */}
           <Box mt="32px" pt="20px" borderTop="1px solid #eee">
             <Text textStyle={"smallText"} color="#666" mb="12px">
-              info@luxemanagement.com
+           luxemanagemnets.info@gmail.com
             </Text>
             <Text  textStyle={"smallText"} color="#666" mb="12px">
               +61 406 631 461
