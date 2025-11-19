@@ -1,5 +1,3 @@
-
-
 import dynamic from "next/dynamic";
 import React, { useEffect } from "react";
 import { Box, Stack, HStack, Icon, Text } from "@chakra-ui/react";
