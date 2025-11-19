@@ -1,16 +1,12 @@
-"use client";
+"use client"
 
-import React, { useEffect, useState } from "react";
-import { Box, Text } from "@chakra-ui/react";
-import TitleSubheading from "@/components/luxeComponents/Text/titleSubheading";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import {
-  DialogContent,
-  DialogCloseTrigger,
-  DialogRoot,
-} from "@/components/chakra-snippets/dialog";
-import HowWeCanGetYouStarted from "@/components/luxeComponents/HowWeCanGetYouStarted";
+import { useEffect, useState } from "react"
+import { Box, Text } from "@chakra-ui/react"
+import TitleSubheading from "@/components/luxeComponents/Text/titleSubheading"
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { DialogContent, DialogCloseTrigger, DialogRoot } from "@/components/chakra-snippets/dialog"
+import HowWeCanGetYouStarted from "@/components/luxeComponents/HowWeCanGetYouStarted"
 // app/contact/page.tsx
 
 const Contact = () => {
@@ -19,25 +15,18 @@ const Contact = () => {
       duration: 1000,
       once: false,
       mirror: true,
-    });
-  }, []);
+    })
+  }, [])
 
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
 
   return (
     <Box bg="white" position="relative">
       {/* Decorative elements */}
 
       <Box maxWidth="1400px" mx="auto" position="relative" zIndex="1">
-        <Box
-          textAlign="center"
-          pt={{ base: "60px", md: "80px" }}
-          data-aos="fade-up"
-        >
-          <TitleSubheading
-            title={"Let's Get in Touch"}
-            subheading={"We'd love to hear from you."}
-          />
+        <Box textAlign="center" pt={{ base: "60px", md: "80px" }} data-aos="fade-up">
+          <TitleSubheading title={"Let's Get in Touch"} subheading={"We'd love to hear from you."} />
 
           {/* Subtitle with more context */}
           <Text
@@ -49,8 +38,8 @@ const Contact = () => {
             px={{ base: "20px", md: "0" }}
             fontFamily="arial"
           >
-            Our property management experts are ready to help you maximize your
-            investment potential with personalized solutions.
+            Our property management experts are ready to help you maximize your investment potential with personalized
+            solutions.
           </Text>
         </Box>
 
@@ -96,22 +85,11 @@ const Contact = () => {
                 gap="10px"
               >
                 <Box>
-                  <Text
-                    fontWeight={600}
-                    color="#0A0F29"
-                    fontSize="16px"
-                    fontFamily="arial"
-                    mb="4px"
-                  >
+                  <Text fontWeight={600} color="#0A0F29" fontSize="16px" fontFamily="arial" mb="4px">
                     Email
                   </Text>
-                  <Text
-                    fontWeight={400}
-                    color="#555"
-                    fontSize="16px"
-                    fontFamily="arial"
-                  >
-                    luxemanagements.info@gmail.com
+                  <Text fontWeight={400} color="#555" fontSize="16px" fontFamily="arial">
+                    info@luxemanagements.com
                   </Text>
                 </Box>
               </Box>
@@ -123,21 +101,10 @@ const Contact = () => {
                 gap="10px"
               >
                 <Box>
-                  <Text
-                    fontWeight={600}
-                    color="#0A0F29"
-                    fontSize="16px"
-                    fontFamily="arial"
-                    mb="4px"
-                  >
+                  <Text fontWeight={600} color="#0A0F29" fontSize="16px" fontFamily="arial" mb="4px">
                     Phone
                   </Text>
-                  <Text
-                    fontWeight={400}
-                    color="#555"
-                    fontSize="16px"
-                    fontFamily="arial"
-                  >
+                  <Text fontWeight={400} color="#555" fontSize="16px" fontFamily="arial">
                     +61 406 631 461
                   </Text>
                 </Box>
@@ -150,21 +117,10 @@ const Contact = () => {
                 gap="10px"
               >
                 <Box>
-                  <Text
-                    fontWeight={600}
-                    color="#0A0F29"
-                    fontSize="16px"
-                    fontFamily="arial"
-                    mb="4px"
-                  >
+                  <Text fontWeight={600} color="#0A0F29" fontSize="16px" fontFamily="arial" mb="4px">
                     Location
                   </Text>
-                  <Text
-                    fontWeight={400}
-                    color="#555"
-                    fontSize="16px"
-                    fontFamily="arial"
-                  >
+                  <Text fontWeight={400} color="#555" fontSize="16px" fontFamily="arial">
                     South Australia
                   </Text>
                 </Box>
@@ -173,62 +129,32 @@ const Contact = () => {
 
             {/* Office hours section */}
             <Box mt="40px">
-              <Text
-                fontSize="18px"
-                fontWeight={600}
-                fontFamily="arial"
-                color="#0A0F29"
-                mb="16px"
-              >
+              <Text fontSize="18px" fontWeight={600} fontFamily="arial" color="#0A0F29" mb="16px">
                 Office Hours
               </Text>
 
               <Box display="flex" flexDirection="column" gap="8px">
-                <Box
-                  display="flex"
-                  justifyContent={{ base: "center", md: "space-between" }}
-                >
+                <Box display="flex" justifyContent={{ base: "center", md: "space-between" }}>
                   <Text fontFamily="arial" color="#555" fontSize="15px">
                     Monday - Friday
                   </Text>
-                  <Text
-                    fontFamily="arial"
-                    color="#555"
-                    fontSize="15px"
-                    fontWeight={500}
-                  >
+                  <Text fontFamily="arial" color="#555" fontSize="15px" fontWeight={500}>
                     9:00 AM - 5:00 PM
                   </Text>
                 </Box>
-                <Box
-                  display="flex"
-                  justifyContent={{ base: "center", md: "space-between" }}
-                >
+                <Box display="flex" justifyContent={{ base: "center", md: "space-between" }}>
                   <Text fontFamily="arial" color="#555" fontSize="15px">
                     Saturday
                   </Text>
-                  <Text
-                    fontFamily="arial"
-                    color="#555"
-                    fontSize="15px"
-                    fontWeight={500}
-                  >
+                  <Text fontFamily="arial" color="#555" fontSize="15px" fontWeight={500}>
                     10:00 AM - 2:00 PM
                   </Text>
                 </Box>
-                <Box
-                  display="flex"
-                  justifyContent={{ base: "center", md: "space-between" }}
-                >
+                <Box display="flex" justifyContent={{ base: "center", md: "space-between" }}>
                   <Text fontFamily="arial" color="#555" fontSize="15px">
                     Sunday
                   </Text>
-                  <Text
-                    fontFamily="arial"
-                    color="#555"
-                    fontSize="15px"
-                    fontWeight={500}
-                  >
+                  <Text fontFamily="arial" color="#555" fontSize="15px" fontWeight={500}>
                     Closed
                   </Text>
                 </Box>
@@ -281,20 +207,11 @@ const Contact = () => {
                 maxWidth="600px"
                 lineHeight="1.6"
               >
-                Get a full consultation, market analysis in under 24 hours for
-                free
+                Get a full consultation, market analysis in under 24 hours for free
               </Text>
 
               {/* Benefits list */}
-              <Box
-                display="flex"
-                flexDirection="column"
-                gap="12px"
-                mb="30px"
-                mt="10px"
-                width="100%"
-                maxWidth="500px"
-              >
+              <Box display="flex" flexDirection="column" gap="12px" mb="30px" mt="10px" width="100%" maxWidth="500px">
                 {[
                   "Personalized AirBnB management strategies",
                   "Detailed market analysis and pricing recommendations",
@@ -322,11 +239,7 @@ const Contact = () => {
                         ✓
                       </Text>
                     </Box>
-                    <Text
-                      color="rgba(255, 255, 255, 0.9)"
-                      fontSize="15px"
-                      fontFamily="arial"
-                    >
+                    <Text color="rgba(255, 255, 255, 0.9)" fontSize="15px" fontFamily="arial">
                       {benefit}
                     </Text>
                   </Box>
@@ -364,32 +277,12 @@ const Contact = () => {
         {/* FAQ Section */}
       </Box>
 
-      <DialogRoot
-             size={"full"}
-        open={isDialogOpen}
-        onOpenChange={({ open }) => setIsDialogOpen(open)}
-      >
-        <DialogContent
-          p={0}
-          bg={"white"}
-          color={"white"}
-          rounded={"16px"}
-          boxShadow="0px 20px 40px rgba(0, 0, 0, 0.2)"
-        >
+      <DialogRoot size={"full"} open={isDialogOpen} onOpenChange={({ open }) => setIsDialogOpen(open)}>
+        <DialogContent p={0} bg={"white"} color={"white"} rounded={"16px"} boxShadow="0px 20px 40px rgba(0, 0, 0, 0.2)">
           <Box position="relative" width="100%" height="100%">
             {/* Header for the dialog */}
-            <Box
-              bg="#0A0F29"
-              p="20px"
-              borderTopLeftRadius="16px"
-              borderTopRightRadius="16px"
-            >
-              <Text
-                color="white"
-                fontWeight="600"
-                fontSize="20px"
-                fontFamily="arial"
-              >
+            <Box bg="#0A0F29" p="20px" borderTopLeftRadius="16px" borderTopRightRadius="16px">
+              <Text color="white" fontWeight="600" fontSize="20px" fontFamily="arial">
                 Schedule Your Free Consultation
               </Text>
             </Box>
@@ -432,7 +325,7 @@ const Contact = () => {
 
       <HowWeCanGetYouStarted />
     </Box>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

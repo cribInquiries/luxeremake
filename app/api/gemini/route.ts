@@ -1,22 +1,19 @@
 /* eslint-disable import/no-unused-modules */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { NextRequest, NextResponse } from "next/server";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { type NextRequest, NextResponse } from "next/server"
+import { GoogleGenerativeAI } from "@google/generative-ai"
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!)
 
 export async function POST(request: NextRequest) {
   try {
-    const { topic } = await request.json();
+    const { topic } = await request.json()
 
     if (!topic || typeof topic !== "string") {
-      return NextResponse.json(
-        { error: "Missing or invalid topic." },
-        { status: 400 },
-      );
+      return NextResponse.json({ error: "Missing or invalid topic." }, { status: 400 })
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" })
 
     const preprompt = `
 === ROLE ===
@@ -36,7 +33,7 @@ Founded: 2022
 Mission: Redefine short-term rental management through quality, transparency, and premium experiences for both guests and property owners.
 
 📌 Contact:
-- Email: luxemanagemnets.info@gmail.com / luxemanagements.info@gmail.com
+- Email: info@luxemanagements.com
 - Phone: +61 406 631 461 / +61 406 631 461
 - Office Hours: Mon–Fri: 9AM–5PM, Sat: 10AM–2PM, Sun: Closed
 
@@ -141,22 +138,18 @@ Example Format:
 Now answer the following user query in the voice of Luxe Managements:
 
 "${topic}"
-`;
+`
 
-    const result = await model.generateContent(preprompt);
-    const response = await result.response;
-    const text = await response.text();
+    const result = await model.generateContent(preprompt)
+    const response = await result.response
+    const text = await response.text()
 
-    return NextResponse.json({ text });
+    return NextResponse.json({ text })
   } catch (error: any) {
-    console.error("BACKEND ERROR:", error.message);
-    return NextResponse.json(
-      { error: "Failed to generate content.", details: error.message },
-      { status: 500 },
-    );
+    console.error("BACKEND ERROR:", error.message)
+    return NextResponse.json({ error: "Failed to generate content.", details: error.message }, { status: 500 })
   }
 }
-
 
 // GPT // API route for handling OpenAI GPT requests BELOW
 
@@ -169,7 +162,7 @@ Now answer the following user query in the voice of Luxe Managements:
 //     const { address } = await request.json();
 
 //     // Pre-prompt GPT-4 to ensure it returns the correct real estate metrics
-//     const prompt = `You are a real estate analysis assistant. When given a property address, return the following metrics: revenue, revenue trend, occupancy, occupancy trend, daily rate, daily rate trend, market score, expenses, income, and cap rate. 
+//     const prompt = `You are a real estate analysis assistant. When given a property address, return the following metrics: revenue, revenue trend, occupancy, occupancy trend, daily rate, daily rate trend, market score, expenses, income, and cap rate.
 
 //     If this data is not directly available, estimate it based on general market trends and typical calculations. Provide all of these metrics in a detailed, clear format.
 
