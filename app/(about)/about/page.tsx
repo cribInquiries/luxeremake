@@ -5,9 +5,8 @@ import { Metadata } from "next";
 import React, { useState, useEffect } from "react";
 import { Box, HStack, Text, VStack } from "@chakra-ui/react";
 
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/navigation';
 import Anjesh from "@/public/images/compnayPFP/Anjesh.jpeg";
-import Aryan from "@/public/images/compnayPFP/Aryan.jpeg";
 import Mat from "@/public/images/compnayPFP/Mat.png";
 import Habibi from "@/public/images/compnayPFP/Habibi.jpeg";
 import Zazeed from "@/public/images/compnayPFP/Zazeed.jpeg";
@@ -47,12 +46,6 @@ const About = () => {
       role: "Executive Partner",
       src: Zazeed.src,
       bio: "Zadeed brings extensive experience in hospitality and real estate, helping property owners maximize their investment returns.",
-    },
-    {
-      name: "Aryan Dangwal",
-      role: "Executive Partner",
-      src: Aryan.src,
-      bio: "Aryan specializes in market analysis and strategic growth, identifying opportunities to expand our portfolio of luxury properties.",
     },
   ]);
 
@@ -187,7 +180,7 @@ const About = () => {
             {/* replace inner Box’s background-image with Next/Image */}
             <Box
               position="relative"
-              h={["350px", "350px", "350px", "500px", "500px", "500px"]}
+              h={["350px", "350px", "350px", "500px", "500px", "600px"]}
               w={["100%", "100%", "100%", "550px", "550px", "550px"]}
               borderRadius="30px"
               overflow="hidden"
@@ -677,7 +670,7 @@ const About = () => {
                 <Image
                   quality={70}
                   loading="lazy"
-                  src={members[currentSlide].src}
+                  src={members[currentSlide].src || "/placeholder.svg"}
                   alt={`Slide ${currentSlide + 1}`}
                
                   fill // in Next.js 13+, for older use layout="fill"
@@ -786,7 +779,7 @@ const About = () => {
             </HStack>
           </VStack>
           {/* <Image
-quality={70} loading="lazy" src={collage} width={500} /> */}
+quality={70} loading="lazy" src={collage || "/placeholder.svg"} width={500} /> */}
         </VStack>
       </HStack>
       {/* Call to Action */}
