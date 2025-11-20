@@ -23,7 +23,7 @@ const About = () => {
     },
     {
       name: "Matthew Zaniewski",
-      role: "CFO",
+      role: "Director", // Updated from CFO to Director
       src: Mat.src,
       bio: "Matthew oversees day-to-day operations, ensuring every property meets our exacting standards and every guest experience exceeds expectations.",
     },
