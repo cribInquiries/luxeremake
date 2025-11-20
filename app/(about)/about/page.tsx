@@ -29,7 +29,7 @@ const About = () => {
     },
     {
       name: "Zadeed Bhuiyan",
-      role: "Executive Partner",
+      role: "Director", // Updated from Executive Partner to Director
       src: Zazeed.src,
       bio: "Zadeed brings extensive experience in hospitality and real estate, helping property owners maximize their investment returns.",
     },
