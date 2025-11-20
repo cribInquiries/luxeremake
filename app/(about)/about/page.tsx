@@ -640,7 +640,7 @@ const About = () => {
                   {members[currentSlide].name}
                 </Text>
 
-                <Text fontWeight={"500"} fontSize={["16px", "16px", "16px", "18px", "18px", "18px"]}>
+                <Text fontWeight={"700"} fontSize={["16px", "16px", "16px", "18px", "18px", "18px"]}>
                   {members[currentSlide].role}
                 </Text>
               </VStack>
