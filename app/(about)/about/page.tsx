@@ -9,6 +9,7 @@ import Zazeed from "@/public/images/compnayPFP/Zazeed.jpeg"
 import { FaAngleRight } from "react-icons/fa"
 
 import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultation"
+import Testimonials from "@/components/testimonials"
 import Image from "next/image"
 
 const About = () => {
@@ -58,6 +59,7 @@ const About = () => {
       {/* Hero Section */}
 
       <HStack
+        id="story"
         zIndex={3}
         px={["4%", "4%", "6%", "6%", "6%", "10%"]}
         justify={"center"} // !!
@@ -496,7 +498,9 @@ const About = () => {
         </Box>
       </Box>
 
+      {/* Meet Our Team Section */}
       <HStack
+        id="team"
         zIndex={3}
         px={["4%", "4%", "6%", "6%", "6%", "10%"]}
         justify={"center"} // !!
@@ -561,26 +565,24 @@ const About = () => {
                 </Text>
               </HStack>
               <Box
-                position="relative" // make room for Image fill
+                position="relative"
                 mt={["80px", "80px", "50px", "50px", "50px", "50px"]}
                 display="block"
                 h={["300px", "300px", "300px", "500px", "500px", "500px"]}
                 w={["300px", "300px", "300px", "500px", "500px", "500px"]}
-                borderRadius="full" // circle
-                overflow="hidden" // clip to circle
+                borderRadius="full"
+                overflow="hidden"
               >
                 <Image
                   quality={70}
                   loading="lazy"
                   src={members[currentSlide].src || "/placeholder.svg"}
                   alt={`Slide ${currentSlide + 1}`}
-                  fill // in Next.js 13+, for older use layout="fill"
+                  fill
                   style={{
-                    objectFit: "cover", // cover & center just like bg-size/bg-pos
+                    objectFit: "cover",
                     objectPosition: "center",
                   }}
-
-                  // optional: preload current slide
                 />
               </Box>
 
@@ -670,10 +672,14 @@ const About = () => {
               </HStack>
             </HStack>
           </VStack>
-          {/* <Image
-quality={70} loading="lazy" src={collage || "/placeholder.svg"} width={500} /> */}
         </VStack>
       </HStack>
+
+      {/* Testimonials Section */}
+      <Box id="testimonials">
+        <Testimonials />
+      </Box>
+
       {/* Call to Action */}
 
       <ScheduleConsultation />
