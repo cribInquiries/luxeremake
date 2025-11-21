@@ -13,9 +13,8 @@ import Testimonials from "@/components/testimonials"
 import Image from "next/image"
 
 const About = () => {
-  const [isDialogOpen, setIsDialogOpen] = useState(false)
   const router = useRouter()
-  const [members, setMembers] = useState([
+  const members = [
     {
       name: "Habibur Rahman",
       role: "Founder & CEO",
@@ -24,17 +23,17 @@ const About = () => {
     },
     {
       name: "Matthew Zaniewski",
-      role: "Director", // Updated from CFO to Director
+      role: "Director",
       src: Mat.src,
       bio: "Matthew oversees day-to-day operations, ensuring every property meets our exacting standards and every guest experience exceeds expectations.",
     },
     {
       name: "Zadeed Bhuiyan",
-      role: "Director", // Updated from Executive Partner to Director
+      role: "Director",
       src: Zazeed.src,
       bio: "Zadeed brings extensive experience in hospitality and real estate, helping property owners maximize their investment returns.",
     },
-  ])
+  ]
 
   const [currentSlide, setCurrentSlide] = useState(0)
 

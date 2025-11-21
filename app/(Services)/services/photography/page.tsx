@@ -1,34 +1,30 @@
-"use client";
-import React, { useEffect } from "react";
-import { Box, HStack, Text, VStack } from "@chakra-ui/react";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultation";
-import PhotographyCardLists from "@/components/luxeComponents/PhotographyCardLists";
-import ImageCompareSlider from "@/components/luxeComponents/ImageCompareSlider";
-import ServicesThreeCards from "@/components/luxeComponents/servicesThreeCards";
-import TopHeader from "@/components/luxeComponents/topHeader";
-import Image from "next/image";
+"use client"
+import { useEffect } from "react"
+import { Box, HStack, Text, VStack } from "@chakra-ui/react"
+import Aos from "aos"
+import "aos/dist/aos.css"
+import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultation"
+import PhotographyCardLists from "@/components/luxeComponents/PhotographyCardLists"
+import ImageCompareSlider from "@/components/luxeComponents/ImageCompareSlider"
+import ServicesThreeCards from "@/components/luxeComponents/servicesThreeCards"
+import TopHeader from "@/components/luxeComponents/topHeader"
+
 const Photography = () => {
   useEffect(() => {
     Aos.init({
       duration: 1000,
       once: false,
       mirror: true,
-    });
-  }, []);
+    })
+  }, [])
 
   return (
     <>
       <TopHeader
-        imgUrl={
-          "https://images.pexels.com/photos/414781/pexels-photo-414781.jpeg?auto=compress&cs=tinysrgb&q=75"
-        }
+        imgUrl={"https://images.pexels.com/photos/414781/pexels-photo-414781.jpeg?auto=compress&cs=tinysrgb&q=75"}
         wordOne={"Photography"}
         wordTwo={""}
-        description={
-          "Showcase your property with stunning professional photography that captures its unique essence."
-        }
+        description={"Showcase your property with stunning professional photography that captures its unique essence."}
         and={false}
       />
 
@@ -86,12 +82,7 @@ const Photography = () => {
           />
         </Box>
       </HStack>
-      <HStack
-        my={["50px", "50px", "100px", "100px", "100px", "100px"]}
-        justify={"center"}
-        align={"center"}
-        w={"100%"}
-      >
+      <HStack my={["50px", "50px", "100px", "100px", "100px", "100px"]} justify={"center"} align={"center"} w={"100%"}>
         <Box w={"90%"} borderTop={"1px solid #e0e0e0"} />
       </HStack>
 
@@ -105,10 +96,7 @@ const Photography = () => {
         h={"100%"}
         my={["50px", "50px", "50px", "50px", "50px", "100px"]}
       >
-        <Box
-          w={["90%", "90%", "90%", "50%", "50%", "50%"]}
-          mb={["50px", "50px", "50px", "50px", "50px", "50px"]}
-        >
+        <Box w={["90%", "90%", "90%", "50%", "50%", "50%"]} mb={["50px", "50px", "50px", "50px", "50px", "50px"]}>
           <Text
             w={["100%", "100%", "100%", "100%", "100%", "100%"]}
             mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
@@ -116,14 +104,7 @@ const Photography = () => {
             fontWeight={600}
             fontFamily={"arial"}
             bgClip="text"
-            textAlign={[
-              "center",
-              "center",
-              "center",
-              "center",
-              "center",
-              "center",
-            ]}
+            textAlign={["center", "center", "center", "center", "center", "center"]}
             color={"black"}
             bgGradient="linear(to-r, teal, blue)"
           >
@@ -132,22 +113,14 @@ const Photography = () => {
           <Text
             fontSize={["18px", "18px", "18px", "18px", "18px", "18px"]}
             mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
-            textAlign={[
-              "center",
-              "center",
-              "center",
-              "center",
-              "center",
-              "center",
-            ]}
+            textAlign={["center", "center", "center", "center", "center", "center"]}
             fontFamily={"arial"}
             color={"black"}
             w={["100%", "100%", "100%", "100%", "100%", "100%"]}
             fontWeight={300}
           >
-            Showcase your property with Luxe Managements's professional
-            photography services, capturing its unique essence to create a
-            lasting impression.
+            Showcase your property with Luxe Managements's professional photography services, capturing its unique
+            essence to create a lasting impression.
           </Text>
         </Box>
 
@@ -171,17 +144,12 @@ const Photography = () => {
       </VStack>
       <PhotographyCardLists />
 
-      <HStack
-        my={["50px", "50px", "100px", "100px", "100px", "100px"]}
-        justify={"center"}
-        align={"center"}
-        w={"100%"}
-      >
+      <HStack my={["50px", "50px", "100px", "100px", "100px", "100px"]} justify={"center"} align={"center"} w={"100%"}>
         <Box w={"90%"} borderTop={"1px solid #e0e0e0"} />
       </HStack>
       <ScheduleConsultation />
     </>
-  );
-};
+  )
+}
 
-export default Photography;
+export default Photography

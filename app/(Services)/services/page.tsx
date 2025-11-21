@@ -1,46 +1,13 @@
-"use client";
-import { Metadata } from "next";
-import React, { useState } from "react";
-import { Box, Text } from "@chakra-ui/react";
-import {
-  Camera,
-  ChevronRight,
-  HomeIcon,
-  Sofa,
-  Sparkle,
-  Star,
-  ArrowRight,
-  Play,
-  Quote,
-  Mail,
-  Phone,
-  MessageCircle,
-} from "lucide-react";
+"use client"
+import { Box, Text } from "@chakra-ui/react"
+import { Camera, ChevronRight, HomeIcon, Sofa, Sparkle } from "lucide-react"
 
-import { useRouter } from "next/navigation";
-import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultation";
-import Image from "next/image";
-// app/services/page.tsx
-
-// eslint-disable-next-line import/no-unused-modules
-import { generatePageMetadata } from "@/components/seo/PageMetadata"
-
-const metadata = generatePageMetadata({
-  title: "Property Management Services Adelaide | Luxe Managements",
-  description:
-    "Comprehensive Airbnb property management services in Adelaide. Professional styling, photography, cleaning, and guest management to maximize your rental income.",
-  path: "/services",
-  keywords: [
-    "property management services",
-    "airbnb services adelaide",
-    "rental property management",
-    "short term rental services",
-  ],
-})
-
+import { useRouter } from "next/navigation"
+import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultation"
+import Image from "next/image"
 
 const Services = () => {
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const router = useRouter()
 
   const serviceItems = [
     {
@@ -48,8 +15,7 @@ const Services = () => {
       title: "Property Management",
       logo: <HomeIcon size={22} color="white" />,
       link: "services/property-management",
-      subheading:
-        "Comprehensive management service including all our offerings.",
+      subheading: "Comprehensive management service including all our offerings.",
       description:
         "Our property management service takes care of everything from tenant screening to maintenance, ensuring your investment is in good hands. We handle day-to-day operations so you can enjoy passive income without the stress.",
       benefits: [
@@ -64,8 +30,7 @@ const Services = () => {
       title: "Cleaning & Linen",
       logo: <Sparkle size={22} color="white" />,
       link: "services/cleaning-and-linen",
-      subheading:
-        "Ensure a pristine, hotel-quality experience for every guest.",
+      subheading: "Ensure a pristine, hotel-quality experience for every guest.",
       description:
         "Our professional cleaning and linen service ensures your property maintains the highest standards of cleanliness. We use eco-friendly products and premium linens to create a luxurious experience for your guests.",
       benefits: [
@@ -80,8 +45,7 @@ const Services = () => {
       title: "Furnishing & Styling",
       logo: <Sofa size={22} color="white" />,
       link: "services/furnishing-and-styling",
-      subheading:
-        "Transform your space into a stunning, Instagram-worthy retreat.",
+      subheading: "Transform your space into a stunning, Instagram-worthy retreat.",
       description:
         "Our expert designers will transform your property into a stylish, inviting space that guests will love. We source quality furniture and décor that enhances your property's unique character while maximizing appeal.",
       benefits: [
@@ -96,8 +60,7 @@ const Services = () => {
       title: "Photography",
       logo: <Camera size={22} color="white" />,
       link: "services/photography",
-      subheading:
-        "Capture your property's best features with professional photography.",
+      subheading: "Capture your property's best features with professional photography.",
       description:
         "Professional photography is essential for showcasing your property. Our photographers use advanced techniques and equipment to highlight your property's best features, helping you attract more bookings.",
       benefits: [
@@ -107,61 +70,16 @@ const Services = () => {
         "Optimized for listing platforms",
       ],
     },
-  ];
-
-  const testimonials = [
-    {
-      name: "John Carter",
-      role: "Property Owner",
-      image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&q=75",
-      quote:
-        "Working with this team has been transformative for my property business. Their attention to detail and exceptional service has significantly increased my bookings and guest satisfaction.",
-      rating: 5,
-    },
-    {
-      name: "Sophia Moore",
-      role: "Real Estate Investor",
-      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&q=75",
-      quote:
-        "I've been working with them for over two years now, and they've consistently exceeded my expectations. My properties have never looked better, and the management is seamless.",
-      rating: 5,
-    },
-    {
-      name: "Matt Carson",
-      role: "Vacation Rental Host",
-      image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&q=75",
-      quote:
-        "The photography service transformed my listing. Bookings increased by 40% after updating with their professional photos. Their eye for detail is unmatched.",
-      rating: 5,
-    },
-  ];
-
-  const router = useRouter();
+  ]
 
   return (
     <Box bg="white">
       {/* Header Section with subtle background */}
-      <Box
-        position="relative"
-        overflow="hidden"
-        pt={["80px", "100px", "120px"]}
-        pb={["60px", "80px", "100px"]}
-      >
+      <Box position="relative" overflow="hidden" pt={["80px", "100px", "120px"]} pb={["60px", "80px", "100px"]}>
         {/* Subtle background element */}
 
-        <Box
-          position="relative"
-          zIndex="1"
-          maxWidth="1200px"
-          mx="auto"
-          px={["20px", "40px", "60px"]}
-        >
-          <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            textAlign="center"
-          >
+        <Box position="relative" zIndex="1" maxWidth="1200px" mx="auto" px={["20px", "40px", "60px"]}>
+          <Box display="flex" flexDirection="column" alignItems="center" textAlign="center">
             <Text
               fontSize={["36px", "48px", "56px"]}
               fontWeight={700}
@@ -181,18 +99,13 @@ const Services = () => {
               lineHeight="1.6"
               mb={["40px", "60px", "80px"]}
             >
-              We offer a complete suite of services to help you manage your
-              property with ease, ensuring every aspect is both beautiful and
-              functional.
+              We offer a complete suite of services to help you manage your property with ease, ensuring every aspect is
+              both beautiful and functional.
             </Text>
           </Box>
 
           {/* Services Grid */}
-          <Box
-            display="grid"
-            gridTemplateColumns={["1fr", "1fr", "repeat(2, 1fr)"]}
-            gap={["40px", "40px", "32px"]}
-          >
+          <Box display="grid" gridTemplateColumns={["1fr", "1fr", "repeat(2, 1fr)"]} gap={["40px", "40px", "32px"]}>
             {serviceItems.map((service, index) => (
               <Box key={service.title} position="relative">
                 {/* Card */}
@@ -225,7 +138,7 @@ const Services = () => {
                     <Image
                       quality={70}
                       loading="lazy"
-                      src={service.img} // your original src left untouched
+                      src={service.img || "/placeholder.svg"} // your original src left untouched
                       alt={service.title ?? ""}
                       title="Service Image"
                       fill // makes the image fill its container
@@ -248,14 +161,7 @@ const Services = () => {
                   />
 
                   {/* Content */}
-                  <Box
-                    position="absolute"
-                    bottom="0"
-                    left="0"
-                    right="0"
-                    padding="28px"
-                    zIndex="2"
-                  >
+                  <Box position="absolute" bottom="0" left="0" right="0" padding="28px" zIndex="2">
                     {/* Icon */}
                     <Box
                       display="flex"
@@ -283,12 +189,7 @@ const Services = () => {
 
                 {/* Description */}
                 <Box mt="24px" mb={["40px", "50px", "60px"]}>
-                  <Text
-                    fontSize={["15px", "16px", "17px"]}
-                    color="#333"
-                    mb="16px"
-                    lineHeight="1.6"
-                  >
+                  <Text fontSize={["15px", "16px", "17px"]} color="#333" mb="16px" lineHeight="1.6">
                     {service.subheading}
                   </Text>
 
@@ -296,13 +197,7 @@ const Services = () => {
                   <Box mb="20px">
                     {service.benefits.map((benefit, i) => (
                       <Box key={i} display="flex" alignItems="center" mb="8px">
-                        <Box
-                          width="6px"
-                          height="6px"
-                          borderRadius="full"
-                          bg="#555"
-                          mr="10px"
-                        />
+                        <Box width="6px" height="6px" borderRadius="full" bg="#555" mr="10px" />
                         <Text fontSize="14px" color="#555">
                           {benefit}
                         </Text>
@@ -322,12 +217,7 @@ const Services = () => {
                     }}
                     width="fit-content"
                   >
-                    <Text
-                      fontSize={["14px", "15px", "16px"]}
-                      fontWeight={600}
-                      color="#000"
-                      mr="8px"
-                    >
+                    <Text fontSize={["14px", "15px", "16px"]} fontWeight={600} color="#000" mr="8px">
                       Explore service
                     </Text>
                     <Box display="flex" alignItems="center">
@@ -347,7 +237,7 @@ const Services = () => {
 
       <ScheduleConsultation />
     </Box>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services

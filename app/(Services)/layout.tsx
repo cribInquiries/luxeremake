@@ -1,27 +1,20 @@
-import React from "react";
+import type React from "react"
 
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer";
-import FAQ from "@/components/FAQ";
+import Navbar from "@/components/Navbar/Navbar"
+import Footer from "@/components/Footer"
 // app/services/page.tsx
-import { Metadata } from "next";
-import Script from "next/script";
+import type { Metadata } from "next"
+import Script from "next/script"
 
 // eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {
   title: "Our Services | Luxe Managements",
   description:
     "Explore our full suite of Airbnb property management services in Adelaide: hosting, styling, cleaning, guest care and more.",
-  keywords: [
-    "Airbnb Services",
-    "Property Management Services",
-    "Adelaide",
-    "Luxe Managements",
-  ],
+  keywords: ["Airbnb Services", "Property Management Services", "Adelaide", "Luxe Managements"],
   openGraph: {
     title: "Our Services | Luxe Managements",
-    description:
-      "Hosting, styling, cleaning, and guest care—see how we maximise your Airbnb returns.",
+    description: "Hosting, styling, cleaning, and guest care—see how we maximise your Airbnb returns.",
     url: "/services",
     images: [
       {
@@ -36,13 +29,11 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Our Services | Luxe Managements",
-    description:
-      "Hosting, styling, cleaning, and guest care—see how we maximise your Airbnb returns.",
+    description: "Hosting, styling, cleaning, and guest care—see how we maximise your Airbnb returns.",
     images: ["/services/og-image.png"],
   },
-};
-
-<Script
+}
+;<Script
   id="ld-service"
   type="application/ld+json"
   strategy="beforeInteractive"
@@ -50,18 +41,17 @@ export const metadata: Metadata = {
     __html: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": ["Airbnb Management", "Airbnb Cleaning", "Short-Term Rental Management"],
-      "provider": {
+      serviceType: ["Airbnb Management", "Airbnb Cleaning", "Short-Term Rental Management"],
+      provider: {
         "@type": "LocalBusiness",
-        "name": "Luxe Managements",
-        "url": "https://www.luxemanagements.com"
+        name: "Luxe Managements",
+        url: "https://www.luxemanagements.com",
       },
-      "areaServed": { "@type": "City", "name": "Adelaide" },
-      "description": "Full-service Airbnb management, cleaning, photography & guest support in Adelaide."
+      areaServed: { "@type": "City", name: "Adelaide" },
+      description: "Full-service Airbnb management, cleaning, photography & guest support in Adelaide.",
     }),
   }}
 />
-
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -69,10 +59,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Navbar />
       <div className="">{children}</div>
 
-  
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

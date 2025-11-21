@@ -1,27 +1,18 @@
-import React from "react";
+import type React from "react"
 
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer";
-import FAQ from "@/components/FAQ";
+import Navbar from "@/components/Navbar/Navbar"
+import Footer from "@/components/Footer"
 // app/gallery/page.tsx
-import { Metadata } from "next";
+import type { Metadata } from "next"
 
 // eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {
   title: "Gallery | Luxe Managements",
-  description:
-    "Browse our portfolio of beautifully styled Airbnb properties managed by Luxe Managements in Adelaide.",
-  keywords: [
-    "Gallery",
-    "Airbnb Photos",
-    "Property Styling",
-    "Adelaide",
-    "Luxe Managements",
-  ],
+  description: "Browse our portfolio of beautifully styled Airbnb properties managed by Luxe Managements in Adelaide.",
+  keywords: ["Gallery", "Airbnb Photos", "Property Styling", "Adelaide", "Luxe Managements"],
   openGraph: {
     title: "Gallery | Luxe Managements",
-    description:
-      "See before-and-after shots of our most stunning Airbnb makeovers.",
+    description: "See before-and-after shots of our most stunning Airbnb makeovers.",
     url: "/gallery",
     images: [
       {
@@ -36,21 +27,20 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Gallery | Luxe Managements",
-    description:
-      "See before-and-after shots of our most stunning Airbnb makeovers.",
+    description: "See before-and-after shots of our most stunning Airbnb makeovers.",
     images: ["/gallery/og-image.png"],
   },
-};
+}
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Navbar />
       <div>{children}</div>
-     
+
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

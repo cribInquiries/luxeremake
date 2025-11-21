@@ -1,130 +1,114 @@
-"use client";
-import { Metadata } from "next";
-import React, { useEffect, useState } from "react";
-import { Box, Text } from "@chakra-ui/react";
-import TitleSubheading from "@/components/luxeComponents/Text/titleSubheading";
+"use client"
+import { useState } from "react"
+import { Box, Text } from "@chakra-ui/react"
 
-import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultation";
-import {
-  DialogContent,
-  DialogCloseTrigger,
-  DialogRoot,
-} from "@/components/chakra-snippets/dialog";
-import DefaultSlider from "@/components/carousel/DefaultSlider";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultation"
+import { DialogContent, DialogCloseTrigger, DialogRoot } from "@/components/chakra-snippets/dialog"
+import DefaultSlider from "@/components/carousel/DefaultSlider"
+import { X } from "lucide-react"
 
-import houseOneImg1 from "@/public/images/dalts/houseOne/WEB/1.jpg";
-import houseOneImg2 from "@/public/images/dalts/houseOne/WEB/2.jpg";
-import houseOneImg3 from "@/public/images/dalts/houseOne/WEB/3.jpg";
-import houseOneImg4 from "@/public/images/dalts/houseOne/WEB/4.jpg";
-import houseOneImg5 from "@/public/images/dalts/houseOne/WEB/5.jpg";
-import houseOneImg6 from "@/public/images/dalts/houseOne/WEB/6.jpg";
-import houseOneImg7 from "@/public/images/dalts/houseOne/WEB/7.jpg";
-import houseOneImg8 from "@/public/images/dalts/houseOne/WEB/8.jpg";
-import houseOneImg9 from "@/public/images/dalts/houseOne/WEB/9.jpg";
-import houseOneImg10 from "@/public/images/dalts/houseOne/WEB/10.jpg";
+import houseOneImg1 from "@/public/images/dalts/houseOne/WEB/1.jpg"
+import houseOneImg2 from "@/public/images/dalts/houseOne/WEB/2.jpg"
+import houseOneImg3 from "@/public/images/dalts/houseOne/WEB/3.jpg"
+import houseOneImg4 from "@/public/images/dalts/houseOne/WEB/4.jpg"
+import houseOneImg5 from "@/public/images/dalts/houseOne/WEB/5.jpg"
+import houseOneImg6 from "@/public/images/dalts/houseOne/WEB/6.jpg"
+import houseOneImg7 from "@/public/images/dalts/houseOne/WEB/7.jpg"
+import houseOneImg8 from "@/public/images/dalts/houseOne/WEB/8.jpg"
+import houseOneImg9 from "@/public/images/dalts/houseOne/WEB/9.jpg"
+import houseOneImg10 from "@/public/images/dalts/houseOne/WEB/10.jpg"
 
-import houseTwoImg1 from "@/public/images/dalts/houseTwo/WEB/1.jpg";
-import houseTwoImg2 from "@/public/images/dalts/houseTwo/WEB/2.jpg";
-import houseTwoImg3 from "@/public/images/dalts/houseTwo/WEB/3.jpg";
-import houseTwoImg4 from "@/public/images/dalts/houseTwo/WEB/4.jpg";
-import houseTwoImg5 from "@/public/images/dalts/houseTwo/WEB/5.jpg";
-import houseTwoImg6 from "@/public/images/dalts/houseTwo/WEB/6.jpg";
-import houseTwoImg7 from "@/public/images/dalts/houseTwo/WEB/7.jpg";
-import houseTwoImg8 from "@/public/images/dalts/houseTwo/WEB/8.jpg";
-import houseTwoImg9 from "@/public/images/dalts/houseTwo/WEB/9.jpg";
-import houseTwoImg10 from "@/public/images/dalts/houseTwo/WEB/10.jpg";
+import houseTwoImg1 from "@/public/images/dalts/houseTwo/WEB/1.jpg"
+import houseTwoImg2 from "@/public/images/dalts/houseTwo/WEB/2.jpg"
+import houseTwoImg3 from "@/public/images/dalts/houseTwo/WEB/3.jpg"
+import houseTwoImg4 from "@/public/images/dalts/houseTwo/WEB/4.jpg"
+import houseTwoImg5 from "@/public/images/dalts/houseTwo/WEB/5.jpg"
+import houseTwoImg6 from "@/public/images/dalts/houseTwo/WEB/6.jpg"
+import houseTwoImg7 from "@/public/images/dalts/houseTwo/WEB/7.jpg"
+import houseTwoImg8 from "@/public/images/dalts/houseTwo/WEB/8.jpg"
+import houseTwoImg9 from "@/public/images/dalts/houseTwo/WEB/9.jpg"
+import houseTwoImg10 from "@/public/images/dalts/houseTwo/WEB/10.jpg"
 
-import houseThreeImg1 from "@/public/images/dalts/houseThree/WEB/1.jpg";
-import houseThreeImg2 from "@/public/images/dalts/houseThree/WEB/2.jpg";
-import houseThreeImg3 from "@/public/images/dalts/houseThree/WEB/3.jpg";
-import houseThreeImg4 from "@/public/images/dalts/houseThree/WEB/4.jpg";
-import houseThreeImg5 from "@/public/images/dalts/houseThree/WEB/5.jpg";
-import houseThreeImg6 from "@/public/images/dalts/houseThree/WEB/6.jpg";
-import houseThreeImg7 from "@/public/images/dalts/houseThree/WEB/7.jpg";
-import houseThreeImg8 from "@/public/images/dalts/houseThree/WEB/8.jpg";
-import houseThreeImg9 from "@/public/images/dalts/houseThree/WEB/9.jpg";
-import houseThreeImg10 from "@/public/images/dalts/houseThree/WEB/10.jpg";
+import houseThreeImg1 from "@/public/images/dalts/houseThree/WEB/1.jpg"
+import houseThreeImg2 from "@/public/images/dalts/houseThree/WEB/2.jpg"
+import houseThreeImg3 from "@/public/images/dalts/houseThree/WEB/3.jpg"
+import houseThreeImg4 from "@/public/images/dalts/houseThree/WEB/4.jpg"
+import houseThreeImg5 from "@/public/images/dalts/houseThree/WEB/5.jpg"
+import houseThreeImg6 from "@/public/images/dalts/houseThree/WEB/6.jpg"
+import houseThreeImg7 from "@/public/images/dalts/houseThree/WEB/7.jpg"
+import houseThreeImg8 from "@/public/images/dalts/houseThree/WEB/8.jpg"
+import houseThreeImg9 from "@/public/images/dalts/houseThree/WEB/9.jpg"
+import houseThreeImg10 from "@/public/images/dalts/houseThree/WEB/10.jpg"
 
-import houseFourImg1 from "@/public/images/dalts/houseFour/WEB/1.jpg";
-import houseFourImg2 from "@/public/images/dalts/houseFour/WEB/2.jpg";
-import houseFourImg3 from "@/public/images/dalts/houseFour/WEB/3.jpg";
-import houseFourImg4 from "@/public/images/dalts/houseFour/WEB/4.jpg";
-import houseFourImg5 from "@/public/images/dalts/houseFour/WEB/5.jpg";
-import houseFourImg6 from "@/public/images/dalts/houseFour/WEB/6.jpg";
-import houseFourImg7 from "@/public/images/dalts/houseFour/WEB/7.jpg";
-import houseFourImg8 from "@/public/images/dalts/houseFour/WEB/8.jpg";
-import houseFourImg9 from "@/public/images/dalts/houseFour/WEB/9.jpg";
-import houseFourImg10 from "@/public/images/dalts/houseFour/WEB/10.jpg";
+import houseFourImg1 from "@/public/images/dalts/houseFour/WEB/1.jpg"
+import houseFourImg2 from "@/public/images/dalts/houseFour/WEB/2.jpg"
+import houseFourImg3 from "@/public/images/dalts/houseFour/WEB/3.jpg"
+import houseFourImg4 from "@/public/images/dalts/houseFour/WEB/4.jpg"
+import houseFourImg5 from "@/public/images/dalts/houseFour/WEB/5.jpg"
+import houseFourImg6 from "@/public/images/dalts/houseFour/WEB/6.jpg"
+import houseFourImg7 from "@/public/images/dalts/houseFour/WEB/7.jpg"
+import houseFourImg8 from "@/public/images/dalts/houseFour/WEB/8.jpg"
+import houseFourImg9 from "@/public/images/dalts/houseFour/WEB/9.jpg"
+import houseFourImg10 from "@/public/images/dalts/houseFour/WEB/10.jpg"
 
-import houseFiveImg1 from "@/public/images/dalts/houseFive/WEB/1.jpg";
-import houseFiveImg2 from "@/public/images/dalts/houseFive/WEB/2.jpg";
-import houseFiveImg3 from "@/public/images/dalts/houseFive/WEB/3.jpg";
-import houseFiveImg4 from "@/public/images/dalts/houseFive/WEB/4.jpg";
-import houseFiveImg5 from "@/public/images/dalts/houseFive/WEB/5.jpg";
-import houseFiveImg6 from "@/public/images/dalts/houseFive/WEB/6.jpg";
-import houseFiveImg7 from "@/public/images/dalts/houseFive/WEB/7.jpg";
-import houseFiveImg8 from "@/public/images/dalts/houseFive/WEB/8.jpg";
-import houseFiveImg9 from "@/public/images/dalts/houseFive/WEB/9.jpg";
-import houseFiveImg10 from "@/public/images/dalts/houseFive/WEB/10.jpg";
+import houseFiveImg1 from "@/public/images/dalts/houseFive/WEB/1.jpg"
+import houseFiveImg2 from "@/public/images/dalts/houseFive/WEB/2.jpg"
+import houseFiveImg3 from "@/public/images/dalts/houseFive/WEB/3.jpg"
+import houseFiveImg4 from "@/public/images/dalts/houseFive/WEB/4.jpg"
+import houseFiveImg5 from "@/public/images/dalts/houseFive/WEB/5.jpg"
+import houseFiveImg6 from "@/public/images/dalts/houseFive/WEB/6.jpg"
+import houseFiveImg7 from "@/public/images/dalts/houseFive/WEB/7.jpg"
+import houseFiveImg8 from "@/public/images/dalts/houseFive/WEB/8.jpg"
+import houseFiveImg9 from "@/public/images/dalts/houseFive/WEB/9.jpg"
+import houseFiveImg10 from "@/public/images/dalts/houseFive/WEB/10.jpg"
 
-import houseSixImg1 from "@/public/images/dalts/houseSix/WEB/1.jpg";
-import houseSixImg2 from "@/public/images/dalts/houseSix/WEB/2.jpg";
-import houseSixImg3 from "@/public/images/dalts/houseSix/WEB/3.jpg";
-import houseSixImg4 from "@/public/images/dalts/houseSix/WEB/4.jpg";
-import houseSixImg5 from "@/public/images/dalts/houseSix/WEB/5.jpg";
-import houseSixImg6 from "@/public/images/dalts/houseSix/WEB/6.jpg";
-import houseSixImg7 from "@/public/images/dalts/houseSix/WEB/7.jpg";
-import houseSixImg8 from "@/public/images/dalts/houseSix/WEB/8.jpg";
-import houseSixImg9 from "@/public/images/dalts/houseSix/WEB/9.jpg";
-import Image from "next/image";
+import houseSixImg1 from "@/public/images/dalts/houseSix/WEB/1.jpg"
+import houseSixImg2 from "@/public/images/dalts/houseSix/WEB/2.jpg"
+import houseSixImg3 from "@/public/images/dalts/houseSix/WEB/3.jpg"
+import houseSixImg4 from "@/public/images/dalts/houseSix/WEB/4.jpg"
+import houseSixImg5 from "@/public/images/dalts/houseSix/WEB/5.jpg"
+import houseSixImg6 from "@/public/images/dalts/houseSix/WEB/6.jpg"
+import houseSixImg7 from "@/public/images/dalts/houseSix/WEB/7.jpg"
+import houseSixImg8 from "@/public/images/dalts/houseSix/WEB/8.jpg"
+import houseSixImg9 from "@/public/images/dalts/houseSix/WEB/9.jpg"
+import Image from "next/image"
 // app/gallery/page.tsx
-
 
 // eslint-disable-next-line import/no-unused-modules
 
-
 const Gallery = () => {
-
   // STATES FOR THE GALLERY & MODAL
   const [clickedImage, setClickedImage] = useState<{
-    img: string;
-    title: string;
-    subheading: string;
-    categories: string[];
-    brand: string;
-    location?: string;
-    bedrooms?: number;
-    bathrooms?: number;
-    carasoleImg?: any;
-  } | null>(null);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [activeCategory, setActiveCategory] = useState("All");
+    img: string
+    title: string
+    subheading: string
+    categories: string[]
+    brand: string
+    location?: string
+    bedrooms?: number
+    bathrooms?: number
+    carasoleImg?: any
+  } | null>(null)
+  const [modalOpen, setModalOpen] = useState(false)
+  const [currentPage, setCurrentPage] = useState(1)
+  const [activeCategory, setActiveCategory] = useState("All")
 
   // STATES FOR FILTER & SEARCH
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("")
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([])
 
   // Category list
-  const categories = [
-    "All",
-    "Property Management",
-    "Interior Design",
-    "Styling",
-    "Renovation",
-  ];
+  const categories = ["All", "Property Management", "Interior Design", "Styling", "Renovation"]
 
   // Toggle a category
   const handleCategoryChange = (category: string) => {
-    setActiveCategory(category);
+    setActiveCategory(category)
     if (category === "All") {
-      setSelectedCategories([]);
+      setSelectedCategories([])
     } else {
-      setSelectedCategories([category]);
+      setSelectedCategories([category])
     }
-  };
+  }
 
   // Enhanced gallery items with more details
   const galleryItems = [
@@ -272,37 +256,33 @@ const Gallery = () => {
         },
       ],
     },
-  ];
+  ]
 
   // Filtering logic based on search term and selected categories
   const filteredGalleryItems = galleryItems.filter((item) => {
-    const lowerSearch = searchTerm.toLowerCase();
+    const lowerSearch = searchTerm.toLowerCase()
     const matchesSearch =
       item.title.toLowerCase().includes(lowerSearch) ||
       item.subheading.toLowerCase().includes(lowerSearch) ||
-      (item.location && item.location.toLowerCase().includes(lowerSearch));
+      (item.location && item.location.toLowerCase().includes(lowerSearch))
 
     const matchesCategory =
-      selectedCategories.length === 0 ||
-      selectedCategories.some((cat) => item.categories.includes(cat));
+      selectedCategories.length === 0 || selectedCategories.some((cat) => item.categories.includes(cat))
 
-    return matchesSearch && matchesCategory;
-  });
+    return matchesSearch && matchesCategory
+  })
 
   // Items per page
-  const itemsPerPage = 6;
-  const totalPages = Math.ceil(filteredGalleryItems.length / itemsPerPage);
+  const itemsPerPage = 6
+  const totalPages = Math.ceil(filteredGalleryItems.length / itemsPerPage)
 
   // Get current items
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = filteredGalleryItems.slice(
-    indexOfFirstItem,
-    indexOfLastItem,
-  );
+  const indexOfLastItem = currentPage * itemsPerPage
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage
+  const currentItems = filteredGalleryItems.slice(indexOfFirstItem, indexOfLastItem)
 
   // Change page
-  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber)
 
   return (
     <>
@@ -328,7 +308,6 @@ const Gallery = () => {
           borderTop="2px solid #e0e0e0"
           borderLeft="2px solid #e0e0e0"
           opacity="0.6"
-     
         />
         <Box
           position="absolute"
@@ -339,11 +318,10 @@ const Gallery = () => {
           borderBottom="2px solid #e0e0e0"
           borderRight="2px solid #e0e0e0"
           opacity="0.6"
-      
         />
 
         {/* Main heading with enhanced typography */}
-        <Box position="relative" >
+        <Box position="relative">
           <Text
             as="h1"
             fontSize={["42px", "48px", "56px"]}
@@ -355,13 +333,7 @@ const Gallery = () => {
           >
             Gallery
           </Text>
-          <Box
-            width="40px"
-            height="3px"
-            backgroundColor="#000"
-            margin="0 auto"
-            marginBottom="20px"
-          />
+          <Box width="40px" height="3px" backgroundColor="#000" margin="0 auto" marginBottom="20px" />
           <Text
             fontSize={["16px", "18px", "20px"]}
             fontWeight="400"
@@ -370,8 +342,7 @@ const Gallery = () => {
             maxWidth="600px"
             lineHeight="1.6"
           >
-            Check out our latest work showcasing premium properties and
-            exceptional interior design.
+            Check out our latest work showcasing premium properties and exceptional interior design.
           </Text>
         </Box>
       </Box>
@@ -384,14 +355,8 @@ const Gallery = () => {
         width="100%"
         marginBottom="40px"
         paddingX={["20px", "30px"]}
-
       >
-        <Box
-          display="flex"
-          flexWrap="wrap"
-          justifyContent="center"
-          gap={["10px", "15px", "20px"]}
-        >
+        <Box display="flex" flexWrap="wrap" justifyContent="center" gap={["10px", "15px", "20px"]}>
           {categories.map((category) => (
             <Box
               key={category}
@@ -400,15 +365,12 @@ const Gallery = () => {
               paddingX={["12px", "16px", "20px"]}
               paddingY={["8px", "10px", "12px"]}
               borderRadius="30px"
-              backgroundColor={
-                activeCategory === category ? "#000" : "transparent"
-              }
+              backgroundColor={activeCategory === category ? "#000" : "transparent"}
               border="1px solid"
               borderColor={activeCategory === category ? "#000" : "#e0e0e0"}
               transition="all 0.3s ease"
               _hover={{
-                backgroundColor:
-                  activeCategory === category ? "#000" : "#f5f5f5",
+                backgroundColor: activeCategory === category ? "#000" : "#f5f5f5",
               }}
             >
               <Text
@@ -435,28 +397,18 @@ const Gallery = () => {
         {/* Gallery Grid with Improved Visual Appeal */}
         <Box
           display="grid"
-          gridTemplateColumns={[
-            "1fr",
-            "repeat(2, 1fr)",
-            "repeat(2, 1fr)",
-            "repeat(3, 1fr)",
-          ]}
+          gridTemplateColumns={["1fr", "repeat(2, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)"]}
           gap={["24px", "30px", "40px"]}
           width="100%"
         >
           {currentItems.map((item, index) => (
-            <Box
-              key={index}
-              position="relative"
-          
-            
-            >
+            <Box key={index} position="relative">
               {/* Property Image with Enhanced Hover Effects */}
               <Box
                 position="relative"
                 onClick={() => {
-                  setClickedImage(item);
-                  setModalOpen(true);
+                  setClickedImage(item)
+                  setModalOpen(true)
                 }}
                 cursor="pointer"
                 overflow="hidden"
@@ -477,9 +429,8 @@ const Gallery = () => {
                   <Image
                     quality={70}
                     loading="lazy"
-                    src={item.img.src}
+                    src={item.img.src || "/placeholder.svg"}
                     alt={item.title}
-                
                     fill // makes the image cover the Box entirely
                     style={{
                       objectFit: "cover", // replicate background-size: cover
@@ -522,13 +473,7 @@ const Gallery = () => {
                   borderRadius="20px"
                   zIndex="1"
                 >
-                  <Text
-                    fontSize="12px"
-                    fontWeight="600"
-                    color="white"
-                    textTransform="uppercase"
-                    letterSpacing="0.5px"
-                  >
+                  <Text fontSize="12px" fontWeight="600" color="white" textTransform="uppercase" letterSpacing="0.5px">
                     {item.categories[0]}
                   </Text>
                 </Box>
@@ -536,13 +481,7 @@ const Gallery = () => {
 
               {/* Property Information Below Image */}
               <Box paddingTop="16px" paddingX="4px">
-                <Text
-                  fontSize={["18px", "20px"]}
-                  fontWeight="600"
-                  color="#000"
-                  marginBottom="4px"
-                  fontFamily="arial"
-                >
+                <Text fontSize={["18px", "20px"]} fontWeight="600" color="#000" marginBottom="4px" fontFamily="arial">
                   {item.title}
                 </Text>
 
@@ -572,13 +511,7 @@ const Gallery = () => {
 
         {/* Pagination Controls */}
         {totalPages > 1 && (
-          <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            marginTop="60px"
-            gap="8px"
-          >
+          <Box display="flex" justifyContent="center" alignItems="center" marginTop="60px" gap="8px">
             {Array.from({ length: totalPages }).map((_, index) => (
               <Box
                 key={index}
@@ -599,11 +532,7 @@ const Gallery = () => {
       </Box>
 
       {/* Enhanced Modal Dialog for Clicked Image */}
-      <DialogRoot
-        size="full"
-        open={modalOpen}
-        onOpenChange={(details) => setModalOpen(details.open)}
-      >
+      <DialogRoot size="full" open={modalOpen} onOpenChange={(details) => setModalOpen(details.open)}>
         <DialogContent
           bg="white"
           color="white"
@@ -613,13 +542,7 @@ const Gallery = () => {
           borderRadius="10px"
         >
           {clickedImage && (
-            <Box
-              position="relative"
-              width="100%"
-              height="100%"
-              display="flex"
-              flexDirection="column"
-            >
+            <Box position="relative" width="100%" height="100%" display="flex" flexDirection="column">
               {/* Property Details Header */}
               <Box
                 padding="20px"
@@ -631,11 +554,7 @@ const Gallery = () => {
                 color="black"
               >
                 <Box>
-                  <Text
-                    fontSize={["20px", "24px"]}
-                    fontWeight="700"
-                    fontFamily="arial"
-                  >
+                  <Text fontSize={["20px", "24px"]} fontWeight="700" fontFamily="arial">
                     {clickedImage.title}
                   </Text>
                   <Text fontSize="16px" color="#666" fontFamily="arial">
@@ -676,18 +595,8 @@ const Gallery = () => {
               </Box>
 
               {/* Property Description Footer */}
-              <Box
-                padding="20px"
-                borderTop="1px solid #eee"
-                backgroundColor="white"
-                color="black"
-              >
-                <Text
-                  fontSize="16px"
-                  lineHeight="1.6"
-                  color="#333"
-                  fontFamily="arial"
-                >
+              <Box padding="20px" borderTop="1px solid #eee" backgroundColor="white" color="black">
+                <Text fontSize="16px" lineHeight="1.6" color="#333" fontFamily="arial">
                   {clickedImage.subheading}
                 </Text>
               </Box>
@@ -742,19 +651,14 @@ const Gallery = () => {
             justifyContent="center"
             alignItems="center"
           >
-            <Box
-              width="20px"
-              height="20px"
-              borderRadius="50%"
-              backgroundColor="#000"
-            />
+            <Box width="20px" height="20px" borderRadius="50%" backgroundColor="#000" />
           </Box>
         </Box>
       </Box>
 
       <ScheduleConsultation />
     </>
-  );
-};
+  )
+}
 
-export default Gallery;
+export default Gallery
