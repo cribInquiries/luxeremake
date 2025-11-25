@@ -1,10 +1,3 @@
-import houseOneImg10 from "@/public/images/dalts/houseOne/WEB/10.jpg"
-import houseTwoImg10 from "@/public/images/dalts/houseTwo/WEB/10.jpg"
-import houseThreeImg10 from "@/public/images/dalts/houseThree/WEB/10.jpg"
-import houseFourImg10 from "@/public/images/dalts/houseFour/WEB/10.jpg"
-import houseFiveImg1 from "@/public/images/dalts/houseFive/WEB/1.jpg"
-import houseSixImg1 from "@/public/images/dalts/houseSix/WEB/1.jpg"
-
 export interface Property {
   id: number
   title: string
@@ -22,7 +15,7 @@ export const properties: Property[] = [
     title: "Modern Beachside Villa",
     shortDescription: "Luxury property with ocean views and premium amenities",
     categories: ["Property Management"],
-    mainImage: houseOneImg10.src,
+    mainImage: "/modern-beachside-villa.jpg",
     bedrooms: 4,
     bathrooms: 3,
     services: ["Full Management", "Styling"],
@@ -32,7 +25,7 @@ export const properties: Property[] = [
     title: "Contemporary Apartment",
     shortDescription: "Urban living with designer finishes and city views",
     categories: ["Styling", "Property Management"],
-    mainImage: houseTwoImg10.src,
+    mainImage: "/contemporary-apartment.jpg",
     bedrooms: 2,
     bathrooms: 2,
     services: ["Interior Design", "Styling"],
@@ -42,7 +35,7 @@ export const properties: Property[] = [
     title: "Renovated Heritage Home",
     shortDescription: "Classic architecture with modern interior updates",
     categories: ["Renovation", "Styling"],
-    mainImage: houseThreeImg10.src,
+    mainImage: "/heritage-home.jpg",
     bedrooms: 3,
     bathrooms: 2,
     services: ["Renovation", "Interior Design"],
@@ -52,7 +45,7 @@ export const properties: Property[] = [
     title: "Luxury Penthouse",
     shortDescription: "Exclusive top-floor residence with panoramic views",
     categories: ["Property Management", "Styling"],
-    mainImage: houseFourImg10.src,
+    mainImage: "/luxury-penthouse.png",
     bedrooms: 3,
     bathrooms: 3,
     services: ["Property Management", "Styling"],
@@ -62,7 +55,7 @@ export const properties: Property[] = [
     title: "Waterfront Estate",
     shortDescription: "Expansive property with private dock and landscaped gardens",
     categories: ["Property Management"],
-    mainImage: houseFiveImg1.src,
+    mainImage: "/waterfront-estate.jpg",
     bedrooms: 5,
     bathrooms: 4,
     services: ["Full Management"],
@@ -72,7 +65,7 @@ export const properties: Property[] = [
     title: "Minimalist Townhouse",
     shortDescription: "Clean lines and thoughtful design in a central location",
     categories: ["Styling", "Renovation"],
-    mainImage: houseSixImg1.src,
+    mainImage: "/minimalist-townhouse.jpg",
     bedrooms: 3,
     bathrooms: 2,
     services: ["Interior Design", "Renovation"],
@@ -82,7 +75,7 @@ export const properties: Property[] = [
     title: "Coastal Retreat",
     shortDescription: "Coming Soon - Your property could be featured here",
     categories: ["Property Management"],
-    mainImage: "",
+    mainImage: "/coastal-retreat.png",
     bedrooms: 3,
     bathrooms: 2,
   },
@@ -91,7 +84,7 @@ export const properties: Property[] = [
     title: "Urban Oasis",
     shortDescription: "Coming Soon - Your property could be featured here",
     categories: ["Styling"],
-    mainImage: "",
+    mainImage: "/urban-oasis.jpg",
     bedrooms: 2,
     bathrooms: 2,
   },
@@ -100,7 +93,7 @@ export const properties: Property[] = [
     title: "Future Transformation",
     shortDescription: "Let us showcase your success story",
     categories: ["Property Management"],
-    mainImage: "",
+    mainImage: "/property-transformation.jpg",
     bedrooms: 0,
     bathrooms: 0,
   },
@@ -109,8 +102,12 @@ export const properties: Property[] = [
     title: "Future Transformation",
     shortDescription: "Let us showcase your success story",
     categories: ["Styling"],
-    mainImage: "",
+    mainImage: "/property-styling.jpg",
     bedrooms: 0,
     bathrooms: 0,
   },
 ]
+
+export function getPropertyById(id: number): Property | undefined {
+  return properties.find((property) => property.id === id)
+}
